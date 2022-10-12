@@ -14,10 +14,10 @@ async def logo(message: types.Message):
 
 @dp.message_handler()
 async def qr(message: types.Message):
-    #text = pyqrcode.create(message.text)
-    #text.png('code.png', scale=5)
-    #await bot.send_photo(chat_id=message.chat.id, photo=open('code.png', 'rb'))
-    print(message.text)
+    text = pyqrcode.create(message.text)
+    text.png('code.png', scale=5)
+    await bot.send_photo(chat_id=message.chat.id, photo=open('code.png', 'rb'))
+
 
 if __name__ == '__main__':
     executor.start_polling(dp)
