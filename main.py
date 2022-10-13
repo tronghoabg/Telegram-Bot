@@ -34,7 +34,7 @@ async def welcome(message: types.Message):
     elif  len(idAcc_Ads) > 0 and len(idAcc_Ads)  < 10:
         await message.answer('⛔ id Ads Acc bạn nhập là quá ngắn, Vui lòng kiểm tra lại')
     else:
-        await message.answer("🤖 Đang share pixcel id: " + idAcc_Ads)
+        await message.answer("🤖 Đang share pixcel cho Ads Acc id: " + idAcc_Ads)
         idpixel = 1
         res = SharePixel(idAcc_Ads, idpixel)
         await message.answer(res)
@@ -48,7 +48,7 @@ async def welcome(message: types.Message):
     elif  len(idAcc_Ads) > 0 and len(idAcc_Ads)  < 10:
         await message.answer('⛔ id Ads Acc bạn nhập là quá ngắn, Vui lòng kiểm tra lại')
     else:
-        await message.answer("🤖 Đang share pixcel id: " + idAcc_Ads)
+        await message.answer("🤖 Đang share pixcel cho Ads Acc id: " + idAcc_Ads)
         idpixel = 2
         res = SharePixel(idAcc_Ads, idpixel)
         await message.answer(res)
@@ -61,7 +61,7 @@ async def welcome(message: types.Message):
     elif  len(idAcc_Ads) > 0 and len(idAcc_Ads)  < 10:
         await message.answer('⛔ id Ads Acc bạn nhập là quá ngắn, Vui lòng kiểm tra lại')
     else:
-        await message.answer("🤖 Đang share pixcel id: " + idAcc_Ads)
+        await message.answer("🤖 Đang share pixcel cho Ads Acc id: " + idAcc_Ads)
         idpixel = 3
         res = SharePixel(idAcc_Ads, idpixel)
         await message.answer(res)
