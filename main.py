@@ -17,7 +17,7 @@ async def welcome(message: types.Message):
     url = SharePixcel(idAcc_Ads)
     await message.answer("Đang share pixcel cho Ads Acc (ID:" + idAcc_Ads + ")")
     response = requests.post(url, data= {"account_id": "559097072569947",
-                                          "business": "606755291020760"})
+                                         "business": "606755291020760"})
     await message.answer(response.text)
     print(response.mess)
 
