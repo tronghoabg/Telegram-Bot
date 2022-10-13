@@ -14,12 +14,10 @@ async def welcome(message: types.Message):
 @dp.message_handler(commands=['px'])
 async def welcome(message: types.Message):
     idAcc_Ads = message.text[4:50]
-    url = SharePixcel(idAcc_Ads)
-    await message.answer("Đang share pixcel cho Ads Acc (ID:" + idAcc_Ads + ")")
-    response = requests.post(url, data= {"account_id": "559097072569947",
-                                         "business": "606755291020760"})
-    await message.answer(response.text)
-    print(response.text)
+    await message.answer("Đang share pixcel id: " + idAcc_Ads)
+    res = SharePixcel(idAcc_Ads)
+    await message.answer(res)
+
 
 
 @dp.message_handler(commands=['logo'])
@@ -35,13 +33,14 @@ async def qr(message: types.Message):
     # await bot.send_photo(chat_id=message.chat.id, photo=open('code.png', 'rb'))
 
 def SharePixcel(idAcc_Ads):
-    idPixcel = "449542583803743"
-    idBM = "606755291020760"
-    Token = "EAABsbCS1iHgBAFB0kUnsJVCD8zZCXM7OqoL4jgMrdd5ZB6qCjclDxIhLxoS0KFNhZCqoEAXTmgD14YWwBHybp78FEO0vPhYsUYghaiKRJsMkA5FJe5D9yky364IMX6QXv2HqhvgcWE7S7SbuOiwTXIpLT7JTZAw8YXZCXlxqp6O7Y2hgZBm7ZBA"
-    url = "https://graph.facebook.com/449542583803743/shared_accounts"
-    print(idAcc_Ads)
-    print(url)
-    return url
+    headerscookie = {
+        'cookie': 'sb=o6A7Y8Xfm5pZcjjO5UqGWX38; datr=o6A7Y2XR6IdFQZSAwQrlguoq; c_user=100038154123301; cppo=1; dpr=1; usida=eyJ2ZXIiOjEsImlkIjoiQXJqb3Z1MHp2M3NmZyIsInRpbWUiOjE2NjU2NjA2MzF9; xs=8:aODLzMa7UVIiuA:2:1664852152:-1:6276::AcVQBDjAUETvEgR6YoQPh9lWdmSjNKdELk2AAMzJvdk; fr=0FwVE48LQfBIO8i3r.AWWef5X2XtapL2c80eA42eg7-v8.BjR_es.5T.AAA.0.0.BjR_es.AWVwZgIbksc; presence=C{"t3":[{"i":"u.100009953598724"}],"utc3":1665661151999,"lm3":"u.100034994394353","v":1}; wd=899x977" '}
+    dataid = {"account_id": idAcc_Ads, "business": "606755291020760",
+              "access_token": "EAABsbCS1iHgBAArLduhvb9zgqFFCgZCDAAA8HetB6ZBcDgt5MBvPfyJWXqmvU2TDNfjFnFmTfWrGCusff9mJmM6hLteWrG7ZBsAP5AudXU0KNaRUnWPahFQxZCTk5gHSkmrqIsQ6oegwZCyTBqdLzOzD7zgXntR4jo8epeYeffSwnyN4QGVc8"}
+    url = "https://graph.facebook.com/v15.0/356037233410519/shared_accounts/"
+    response = requests.post(url, data=dataid, headers=headerscookie).json()
+    print(response)
+    return response
 
 
 
