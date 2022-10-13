@@ -1,6 +1,6 @@
 from aiogram import Bot, Dispatcher, executor, types
 import pyqrcode
-import requests
+#import requests
 
 bot = Bot(token='5435752958:AAFPTdbfqUAumSaBj-3B6PnpZhQ-mHR50MQ')
 dp = Dispatcher(bot)
@@ -20,7 +20,6 @@ async def welcome(message: types.Message):
      #                                    "business": "606755291020760"})
     #await message.answer(response.text)
     #print(response.mess)
-
 
 
 @dp.message_handler(commands=['logo'])
