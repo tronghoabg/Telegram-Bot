@@ -21,29 +21,50 @@ async def welcome(message: types.Message):
     await message.reply("🤖 Hello! Im Venus Bot")
 
 
+@dp.message_handler(commands=['px'])
+async def welcome(message: types.Message):
+    await message.answer('Vui lòng nhập cú pháp /px(x) x có thể là 1 , 2 , 3')
+
+
 @dp.message_handler(commands=['px1'])
 async def welcome(message: types.Message):
     idAcc_Ads = message.text[5:50]
-    await message.answer("🤖 Đang share pixcel id: " + idAcc_Ads)
-    idpixel = 1
-    res = SharePixel(idAcc_Ads, idpixel)
-    await message.answer(res)
+    if len(idAcc_Ads) == 0 :
+        await message.answer('⛔ Có vẻ bạn chưa nhập id Ads acc')
+    elif  len(idAcc_Ads) > 0 and len(idAcc_Ads)  < 10:
+        await message.answer('⛔ id Ads Acc bạn nhập là quá ngắn, Vui lòng kiểm tra lại')
+    else:
+        await message.answer("🤖 Đang share pixcel id: " + idAcc_Ads)
+        idpixel = 1
+        res = SharePixel(idAcc_Ads, idpixel)
+        await message.answer(res)
+
 
 @dp.message_handler(commands=['px2'])
 async def welcome(message: types.Message):
     idAcc_Ads = message.text[5:50]
-    await message.answer("🤖 Đang share pixcel id: " + idAcc_Ads)
-    idpixel = 2
-    res = SharePixel(idAcc_Ads, idpixel)
-    await message.answer(res)
+    if len(idAcc_Ads) == 0 :
+        await message.answer('⛔ Có vẻ bạn chưa nhập id Ads acc')
+    elif  len(idAcc_Ads) > 0 and len(idAcc_Ads)  < 10:
+        await message.answer('⛔ id Ads Acc bạn nhập là quá ngắn, Vui lòng kiểm tra lại')
+    else:
+        await message.answer("🤖 Đang share pixcel id: " + idAcc_Ads)
+        idpixel = 2
+        res = SharePixel(idAcc_Ads, idpixel)
+        await message.answer(res)
 
 @dp.message_handler(commands=['px3'])
 async def welcome(message: types.Message):
     idAcc_Ads = message.text[5:50]
-    await message.answer("🤖 Đang share pixcel id: " + idAcc_Ads)
-    idpixel = 3
-    res = SharePixel(idAcc_Ads, idpixel)
-    await message.answer(res)
+    if len(idAcc_Ads) == 0 :
+        await message.answer('⛔ Có vẻ bạn chưa nhập id Ads acc')
+    elif  len(idAcc_Ads) > 0 and len(idAcc_Ads)  < 10:
+        await message.answer('⛔ id Ads Acc bạn nhập là quá ngắn, Vui lòng kiểm tra lại')
+    else:
+        await message.answer("🤖 Đang share pixcel id: " + idAcc_Ads)
+        idpixel = 3
+        res = SharePixel(idAcc_Ads, idpixel)
+        await message.answer(res)
 
 
 @dp.message_handler(commands=['logo'])
@@ -53,7 +74,7 @@ async def logo(message: types.Message):
 
 @dp.message_handler()
 async def qr(message: types.Message):
-    print('hihi')
+    print('')
     # text = pyqrcode.create(message.text)
     # text.png('code.png', scale=5)
     # await bot.send_photo(chat_id=message.chat.id, photo=open('code.png', 'rb'))
@@ -69,14 +90,13 @@ def SharePixel(idAcc_Ads, idPixel):
 
     try:
         result = response['success']
-        result = "✅ Share pixel " + dictPixel[idPixel]['name']  + " thành công cho ADS Acc: " + idAcc_Ads
+        result = "✅ Share pixel " + dictPixel[idPixel]['name']  + " thành công cho id ADS Acc: " + idAcc_Ads
     except:
-        result = "⛔ Share pixel không thành công, vui lòng kiểm tra lại ADS Acc: " + idAcc_Ads
+        result = "⛔ Share pixel không thành công, có thể do sai id ADS Acc: " + idAcc_Ads
 
     print(dictPixel[idPixel]['name'])
     print(response)
     return result
-
 
 
 if __name__ == '__main__':
