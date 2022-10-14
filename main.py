@@ -84,7 +84,7 @@ def SharePixel(idAcc_Ads, idPixel):
     headerscookie = {
         'cookie': 'sb=o6A7Y8Xfm5pZcjjO5UqGWX38; datr=o6A7Y2XR6IdFQZSAwQrlguoq; c_user=100038154123301; cppo=1; dpr=1; usida=eyJ2ZXIiOjEsImlkIjoiQXJqb3Z1MHp2M3NmZyIsInRpbWUiOjE2NjU2NjA2MzF9; xs=8:aODLzMa7UVIiuA:2:1664852152:-1:6276::AcVQBDjAUETvEgR6YoQPh9lWdmSjNKdELk2AAMzJvdk; fr=0FwVE48LQfBIO8i3r.AWWef5X2XtapL2c80eA42eg7-v8.BjR_es.5T.AAA.0.0.BjR_es.AWVwZgIbksc; presence=C{"t3":[{"i":"u.100009953598724"}],"utc3":1665661151999,"lm3":"u.100034994394353","v":1}; wd=899x977" '}
     dataid = {"account_id": idAcc_Ads, "business": "606755291020760",
-              "access_token": "EAABsbCS1iHgBAKbge6PrIVvo96QDZBFphK76q6KRAVoURDXhiZBK0X4SDkBfsuqWW65yvJSYuJvcdb1htUWp4Jq0dDOqxUROyZCNMiZAVLagFUZCZBhOncrdxXdpWzM9QkEaEZCz5ViGSfmt7BeoZBt0Xu6OtNySwfvlZBzW9EZCw2OQLPmCw4oaqS"}
+              "access_token": "EAABsbCS1iHgBAEDmQCZBRg9ZBZB0TyH7C1HSThJE9ZCfMZBf5b6ZBrbu0elbZA33fZCZAOI6fvWHURnw7rivMGSz1wWtEfFZCFDIqf2shf9C2aeduDW5NsPwri1CD1BBVvMUxbtKTnzRMcsr6Luka1Hdyt3qpbTOgDKP5aNsvKknWRgOPdbquICnzB"}
     url = "https://graph.facebook.com/v15.0/" + dictPixel[idPixel]['id'] +"/shared_accounts/"
     response = requests.post(url, data=dataid, headers=headerscookie).json()
 
