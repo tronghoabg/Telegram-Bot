@@ -23,7 +23,7 @@ async def welcome(message: types.Message):
 
 @dp.message_handler(commands=['px'])
 async def welcome(message: types.Message):
-    await message.answer('Vui lòng nhập cú pháp /px(x) x có thể là 1 , 2 , 3')
+    await message.answer('Vui lòng nhập cú pháp /px (x) x có thể là 1 , 2 , 3')
 
 
 @dp.message_handler(commands=['px1'])
@@ -81,10 +81,9 @@ async def qr(message: types.Message):
 
 def SharePixel(idAcc_Ads, idPixel):
     result = ""
-    headerscookie = {
-        'cookie': 'sb=o6A7Y8Xfm5pZcjjO5UqGWX38; datr=o6A7Y2XR6IdFQZSAwQrlguoq; c_user=100038154123301; cppo=1; dpr=1; usida=eyJ2ZXIiOjEsImlkIjoiQXJqb3Z1MHp2M3NmZyIsInRpbWUiOjE2NjU2NjA2MzF9; xs=8:aODLzMa7UVIiuA:2:1664852152:-1:6276::AcVQBDjAUETvEgR6YoQPh9lWdmSjNKdELk2AAMzJvdk; fr=0FwVE48LQfBIO8i3r.AWWef5X2XtapL2c80eA42eg7-v8.BjR_es.5T.AAA.0.0.BjR_es.AWVwZgIbksc; presence=C{"t3":[{"i":"u.100009953598724"}],"utc3":1665661151999,"lm3":"u.100034994394353","v":1}; wd=899x977" '}
+    headerscookie = {'cookie': 'sb=AxtJYx8IlsDg0T71msvaG3QF;wd=1920x979;datr=AxtJY1jnAkhw3iwMGtqVppAw;locale=vi_VN;c_user=100038154123301;xs=37%3AVIUGDyuScRUapg%3A2%3A1665735595%3A-1%3A6276%3A%3AAcXRiBDX1HxrLu_OdBhnqgPPqNIHwwR4S7kqbA8OXQ;fr=00yc3rz6exrFwpgrw.AWWksRIhW9Qz9kIv8Rh5RLJGzzw.BjSRyS.AO.AAA.0.0.BjSRyV.AWU0DsXKrIQ;presence=C%7B%22t3%22%3A%5B%5D%2C%22utc3%22%3A1665735840188%2C%22v%22%3A1%7D;cppo=1;usida=eyJ2ZXIiOjEsImlkIjoiQXJqcWkxMTRhYjFqNSIsInRpbWUiOjE2NjU3MzYxMzZ9;' }
     dataid = {"account_id": idAcc_Ads, "business": "606755291020760",
-              "access_token": "EAABsbCS1iHgBAEDmQCZBRg9ZBZB0TyH7C1HSThJE9ZCfMZBf5b6ZBrbu0elbZA33fZCZAOI6fvWHURnw7rivMGSz1wWtEfFZCFDIqf2shf9C2aeduDW5NsPwri1CD1BBVvMUxbtKTnzRMcsr6Luka1Hdyt3qpbTOgDKP5aNsvKknWRgOPdbquICnzB"}
+              "access_token": "EAABsbCS1iHgBAIv7NAlBwo7oN3asZBWZCTVZBkr4AycKyZAZC3kCpdLZB4jOs5Vi3ZAUiP7wYbM5Dir3eVTZAYpyiAPte7wnRJOvHhHztWK3sTnHxdgbxpJ1E3U7gsUq0E0GayF3hZBDOKDD1bAmlPKwhOZBaJYk1HX9EyG8tX4thnxwZDZD"}
     url = "https://graph.facebook.com/v15.0/" + dictPixel[idPixel]['id'] +"/shared_accounts/"
     response = requests.post(url, data=dataid, headers=headerscookie).json()
 
@@ -92,8 +91,10 @@ def SharePixel(idAcc_Ads, idPixel):
         result = response['success']
         result = "✅ Share pixel " + dictPixel[idPixel]['name']  + " thành công cho id ADS Acc: " + idAcc_Ads
     except:
-        result = "⛔ Share pixel không thành công, có thể do sai id ADS Acc: " + idAcc_Ads
-
+        try:
+            result =  "⛔ " + response['error']['error_user_msg']
+        except:
+            result = "⛔ " + response['error']['message']
     print(dictPixel[idPixel]['name'])
     print(response)
     return result
