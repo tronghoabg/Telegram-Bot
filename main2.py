@@ -52,7 +52,7 @@ async def share(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text(res)
 
 
-async def share(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def getStats(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     print(update.message.text)
     message = update.message
 
