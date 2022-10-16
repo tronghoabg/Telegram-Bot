@@ -14,9 +14,9 @@ dictPixel = {   1:
             }
 def SharePixel(idAcc_Ads, idPixel):
     result = ""
-    headerscookie = {'cookie': 'sb=AxtJYx8IlsDg0T71msvaG3QF;wd=1920x979;datr=AxtJY1jnAkhw3iwMGtqVppAw;locale=vi_VN;c_user=100038154123301;xs=37%3AVIUGDyuScRUapg%3A2%3A1665735595%3A-1%3A6276%3A%3AAcXRiBDX1HxrLu_OdBhnqgPPqNIHwwR4S7kqbA8OXQ;fr=00yc3rz6exrFwpgrw.AWWksRIhW9Qz9kIv8Rh5RLJGzzw.BjSRyS.AO.AAA.0.0.BjSRyV.AWU0DsXKrIQ;presence=C%7B%22t3%22%3A%5B%5D%2C%22utc3%22%3A1665735840188%2C%22v%22%3A1%7D;cppo=1;usida=eyJ2ZXIiOjEsImlkIjoiQXJqcWkxMTRhYjFqNSIsInRpbWUiOjE2NjU3MzYxMzZ9;' }
+    headerscookie = {'cookie': 'sb=AxtJYx8IlsDg0T71msvaG3QF;datr=AxtJY1jnAkhw3iwMGtqVppAw;locale=vi_VN;c_user=100038154123301;cppo=1;dpr=1.25;xs=37%3AVIUGDyuScRUapg%3A2%3A1665735595%3A-1%3A6276%3A%3AAcWQU1dQJxHsoEq3O1ehssZRDQSPDok2RsGP16IiIQ;wd=1536x763;presence=EDvF3EtimeF1665902731EuserFA21B38154123301A2EstateFDutF0CEchF_7bCC;usida=eyJ2ZXIiOjEsImlkIjoiQXJqdTJoNjFycnVrMTkiLCJ0aW1lIjoxNjY1OTAyODM5fQ%3D%3D;fr=0WT0wRe5OwjVcjtEE.AWU10VwBBTscWhLbTCyhPncL0Bs.BjS6gr.AO.AAA.0.0.BjS6j3.AWUXQnxWit8;' }
     dataid = {"account_id": idAcc_Ads, "business": "606755291020760",
-              "access_token": "EAABsbCS1iHgBAHFgvEsAY6zf202XEBGqemdvcabMlbjPNS74F16A8RPxZAnG6HXMvZBvr4VIiWhWRDRHkN0Q3kZBUtgKybC9mAlaPR3YfZBc3WsCQVKZBmIDz5chr9mPcNYNlp5dbhZBcS9eu6J9pjEvl6K0OvTqs5yIqltpVrQwZDZD"}
+              "access_token": "EAABsbCS1iHgBAJTjvEmZAguWipxKXLZCbwm96TrfwgHsZAEMo3jpy5BwhvwkTmyHi2wWGceXHZCVEaKxmoorc3rnCTXo8L6NixrRYvpnnyqHdys3k5oqZCxvxvBU39LCM4NxXRiNZB9eQbPubq9RdGEyaAZCKZBFTDaDFGN980KDkAZDZD"}
     url = "https://graph.facebook.com/v15.0/" + dictPixel[idPixel]['id'] +"/shared_accounts/"
     response = requests.post(url, data=dataid, headers=headerscookie).json()
 

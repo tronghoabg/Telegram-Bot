@@ -1,0 +1,2517 @@
+<!DOCTYPE html>
+
+<html class="wp-toolbar" lang="en-US">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Analytics ‹ WooCommerce ‹ Happy Shop</title>
+<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!=='undefined')jQuery(function(){func();});else if(typeof wpOnload!=='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var ajaxurl = '/wp-admin/admin-ajax.php',
+	pagenow = 'toplevel_page_wc-admin',
+	typenow = '',
+	adminpage = 'toplevel_page_wc-admin',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+</script>
+<link as="style" href="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/components/style.css?ver=6.8.2" rel="preload"/>
+<link as="style" href="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/app/style.css?ver=6.8.2" rel="preload"/>
+<link as="script" href="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/components/index.js?ver=6.8.2" rel="preload"/>
+<link as="script" href="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/app/index.js?ver=6.8.2" rel="preload"/>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="https://curilic.com/wp-admin/load-styles.php?c=1&amp;dir=ltr&amp;load%5Bchunk_0%5D=dashicons,admin-bar,common,forms,admin-menu,dashboard,list-tables,edit,revisions,media,themes,about,nav-menus,wp-pointer,widgets&amp;load%5Bchunk_1%5D=,site-icon,l10n,buttons,wp-auth-check,media-views,wp-color-picker,wp-components&amp;ver=6.0.2" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://curilic.com/wp-content/mu-plugins/nexcess-mapps/assets/admin.css?ver=1.33.0" id="nexcess-mapps-admin-css" media="all" rel="stylesheet"/>
+<style id="nexcess-mapps-admin-inline-css">
+
+				.mapps-wrap .nexcess-page-title {
+					background-image: url("https://curilic.com/wp-content/mu-plugins/nexcess-mapps/assets/img/nexcess-logo.svg?v2021");
+				}
+				.mapps-nexcess-icon::before {
+					background-image: url("https://curilic.com/wp-content/mu-plugins/nexcess-mapps/assets/img/nexcess-icon.svg");
+				}
+				.mapps-kadence-icon::before {
+					background-image: url("https://curilic.com/wp-content/mu-plugins/nexcess-mapps/assets/img/kadence-icon.png");
+				}
+				.mapps-rcp-icon::before {
+					background-image: url("https://curilic.com/wp-content/mu-plugins/nexcess-mapps/assets/img/restrict-content-pro-icon.svg");
+				}
+</style>
+<link href="https://curilic.com/wp-content/plugins/woocommerce-orders-tracking/assets/css/show-message.css?ver=1.0.7" id="villatheme-admin-show-message-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-content/plugins/advanced-custom-fields-pro/assets/build/css/acf-global.css?ver=5.12.3" id="acf-global-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16" id="mediaelement-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.0.2" id="wp-mediaelement-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-includes/js/imgareaselect/imgareaselect.css?ver=0.9.8" id="imgareaselect-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-content/plugins/paypal-for-woocommerce/assets/css/admin.css?ver=3.0.20" id="ppe_cart-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-content/plugins/woo-variation-swatches/assets/css/admin.min.css?ver=1661346814" id="woo-variation-swatches-admin-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-content/plugins/woocommerce-orders-tracking/assets/css/villatheme-support.css?ver=6.0.2" id="villatheme-support-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-content/plugins/woocommerce/assets/css/menu.css?ver=6.8.2" id="woocommerce_admin_menu_styles-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-includes/js/thickbox/thickbox.css?ver=6.0.2" id="thickbox-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/components/style.css?ver=6.8.2" id="wc-components-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/customer-effort-score/style.css?ver=6.8.2" id="wc-customer-effort-score-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/experimental/style.css?ver=6.8.2" id="wc-experimental-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/app/style.css?ver=6.8.2" id="wc-admin-app-css" media="all" rel="stylesheet"/>
+<link href="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/onboarding/style.css?ver=6.8.2" id="wc-onboarding-css" media="all" rel="stylesheet"/>
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/curilic.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<script id="angelleye_admin-js-extra">
+var angelleye_admin = {"is_ssl":"yes","choose_image":"Choose Image","payment_method":"","payment_action":"","is_paypal_credit_enable":"yes","locale":"en_US"};
+</script>
+<script id="wc-enhanced-select-js-extra">
+var wc_enhanced_select_params = {"i18n_no_matches":"No matches found","i18n_ajax_error":"Loading failed","i18n_input_too_short_1":"Please enter 1 or more characters","i18n_input_too_short_n":"Please enter %qty% or more characters","i18n_input_too_long_1":"Please delete 1 character","i18n_input_too_long_n":"Please delete %qty% characters","i18n_selection_too_long_1":"You can only select 1 item","i18n_selection_too_long_n":"You can only select %qty% items","i18n_load_more":"Loading more results\u2026","i18n_searching":"Searching\u2026","ajax_url":"https:\/\/curilic.com\/wp-admin\/admin-ajax.php","search_products_nonce":"c7f89b37c7","search_customers_nonce":"1333aad7ea","search_categories_nonce":"172542b38d","search_pages_nonce":"bbbb3c254d"};
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var userSettings = {"url":"\/","uid":"8","time":"1665901060","secure":"1"};/* ]]> */
+</script>
+<script src="https://curilic.com/wp-admin/load-scripts.php?c=1&amp;load%5Bchunk_0%5D=jquery-core,jquery-migrate,utils,moxiejs,plupload&amp;ver=6.0.2" type="text/javascript"></script>
+<script id="villatheme-admin-show-message-js" src="https://curilic.com/wp-content/plugins/woocommerce-orders-tracking/assets/js/show-message.js?ver=1.0.7"></script>
+<!--[if lt IE 8]>
+<script src='https://curilic.com/wp-includes/js/json2.min.js?ver=2015-05-03' id='json2-js'></script>
+<![endif]-->
+<script id="angelleye_admin-js" src="https://curilic.com/wp-content/plugins/paypal-for-woocommerce/assets/js/angelleye-admin-v2.js?ver=1665901060"></script>
+<script id="selectWoo-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min.js?ver=1.0.6"></script>
+<script id="wc-enhanced-select-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/js/admin/wc-enhanced-select.min.js?ver=6.8.2"></script>
+<script id="serializejson-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/js/jquery-serializejson/jquery.serializejson.min.js?ver=2.8.1"></script>
+<script id="admin_spack_js-js" src="https://curilic.com/wp-content/plugins/pixelyoursite-super-pack/dist/scripts/admin.js?ver=2.1.7"></script>
+<script type="text/javascript">
+            jQuery(document).ready(function(){
+                function wt_sc_toggle_max_discount_amount_field(elm)
+                {
+                    var type = elm.val();
+                    if(type == 'percent' || type == 'fixed_product')
+                    {
+                        jQuery('#wt_max_discount').show();
+                    }else
+                    {
+                        jQuery('#wt_max_discount').hide();
+                    }
+                }
+                jQuery('#discount_type').on('change',function(){
+                    wt_sc_toggle_max_discount_amount_field(jQuery(this));
+                });
+                wt_sc_toggle_max_discount_amount_field(jQuery('#discount_type'));
+            });
+        </script>
+<meta content="app-id=1389130815" name="apple-itunes-app"/>
+<script type="text/javascript">var _wpColorScheme = {"icons":{"base":"#a7aaad","focus":"#72aee6","current":"#fff"}};</script>
+<link href="https://curilic.com/wp-admin/admin.php?page=wc-admin&amp;path=%2Fanalytics%2Foverview&amp;period=custom&amp;compare=previous_year&amp;after=2022-10-13&amp;before=2022-10-16" id="wp-admin-canonical" rel="canonical"/>
+<script>
+		if ( window.history.replaceState ) {
+			window.history.replaceState( null, null, document.getElementById( 'wp-admin-canonical' ).href + window.location.hash );
+		}
+	</script>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/><style media="print" type="text/css">#wpadminbar { display:none; }</style>
+</head>
+<body class="wp-admin wp-core-ui no-js theme-asiup-v3.1 acf-admin-5-3 acf-browser- woocommerce-feature-enabled-activity-panels woocommerce-feature-enabled-analytics woocommerce-feature-enabled-coupons woocommerce-feature-enabled-customer-effort-score-tracks woocommerce-feature-enabled-experimental-products-task woocommerce-feature-enabled-experimental-import-products-task woocommerce-feature-enabled-experimental-fashion-sample-products woocommerce-feature-enabled-experimental-product-tour woocommerce-feature-enabled-shipping-smart-defaults woocommerce-feature-enabled-shipping-setting-tour woocommerce-feature-enabled-homescreen woocommerce-feature-enabled-marketing woocommerce-feature-enabled-mobile-app-banner woocommerce-feature-enabled-navigation woocommerce-feature-enabled-onboarding woocommerce-feature-enabled-onboarding-tasks woocommerce-feature-enabled-remote-inbox-notifications woocommerce-feature-enabled-remote-free-extensions woocommerce-feature-enabled-payment-gateway-suggestions woocommerce-feature-enabled-shipping-label-banner woocommerce-feature-enabled-subscriptions woocommerce-feature-enabled-store-alerts woocommerce-feature-enabled-transient-notices woocommerce-feature-enabled-wc-pay-promotion woocommerce-feature-enabled-wc-pay-welcome-page woocommerce-feature-enabled-wc-pay-subscriptions-page woocommerce-page wc-wp-version-gte-53 wc-wp-version-gte-55 toplevel_page_wc-admin auto-fold admin-bar branch-6 version-6-0-2 admin-color-fresh locale-en-us no-customize-support no-svg">
+<script type="text/javascript">
+	document.body.className = document.body.className.replace('no-js','js');
+</script>
+<div id="wpwrap">
+<div aria-label="Main menu" id="adminmenumain" role="navigation">
+<a class="screen-reader-shortcut" href="#wpbody-content">Skip to main content</a>
+<a class="screen-reader-shortcut" href="#wp-toolbar">Skip to toolbar</a>
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<ul id="adminmenu">
+<li class="wp-first-item wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
+<a class="wp-first-item wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" href="index.php"><div class="wp-menu-arrow"><div></div></div><div aria-hidden="true" class="wp-menu-image dashicons-before dashicons-dashboard"><br/></div><div class="wp-menu-name">Dashboard</div></a></li>
+<li aria-hidden="true" class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media menu-top-first" id="menu-media">
+<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media menu-top-first" href="upload.php"><div class="wp-menu-arrow"><div></div></div><div aria-hidden="true" class="wp-menu-image dashicons-before dashicons-admin-media"><br/></div><div class="wp-menu-name">Media</div></a>
+<ul class="wp-submenu wp-submenu-wrap"><li aria-hidden="true" class="wp-submenu-head">Media</li><li class="wp-first-item"><a class="wp-first-item" href="upload.php">Library</a></li><li><a href="media-new.php">Add New</a></li></ul></li>
+<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-product" id="menu-posts-product">
+<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-product" href="edit.php?post_type=product"><div class="wp-menu-arrow"><div></div></div><div aria-hidden="true" class="wp-menu-image dashicons-before dashicons-archive"><br/></div><div class="wp-menu-name">Products</div></a>
+<ul class="wp-submenu wp-submenu-wrap"><li aria-hidden="true" class="wp-submenu-head">Products</li><li class="wp-first-item"><a class="wp-first-item" href="edit.php?post_type=product">All Products</a></li><li><a href="post-new.php?post_type=product">Add New</a></li><li><a href="edit-tags.php?taxonomy=product_cat&amp;post_type=product">Categories</a></li><li><a href="edit-tags.php?taxonomy=product_tag&amp;post_type=product">Tags</a></li><li><a href="edit.php?post_type=product&amp;page=product_attributes">Attributes</a></li></ul></li>
+<li class="wp-not-current-submenu menu-top toplevel_page_wc-reports" id="toplevel_page_wc-reports">
+<a class="wp-not-current-submenu menu-top toplevel_page_wc-reports" href="admin.php?page=wc-reports"><div class="wp-menu-arrow"><div></div></div><div aria-hidden="true" class="wp-menu-image dashicons-before dashicons-chart-bar"><br/></div><div class="wp-menu-name">Sales reports</div></a></li>
+<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wc-admin&amp;path=/analytics/overview" id="toplevel_page_wc-admin-path--analytics-overview"><a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wc-admin&amp;path=/analytics/overview" href="admin.php?page=wc-admin&amp;path=/analytics/overview"><div class="wp-menu-arrow"><div></div></div><div aria-hidden="true" class="wp-menu-image dashicons-before dashicons-chart-bar"><br/></div><div class="wp-menu-name">Analytics</div></a>
+<ul class="wp-submenu wp-submenu-wrap"><li aria-hidden="true" class="wp-submenu-head">Analytics</li><li class="wp-first-item"><a class="wp-first-item" href="admin.php?page=wc-admin&amp;path=/analytics/overview">Overview</a></li><li><a href="admin.php?page=wc-admin&amp;path=/analytics/products">Products</a></li><li><a href="admin.php?page=wc-admin&amp;path=/analytics/revenue">Revenue</a></li><li><a href="admin.php?page=wc-admin&amp;path=/analytics/orders">Orders</a></li><li><a href="admin.php?page=wc-admin&amp;path=/analytics/variations">Variations</a></li><li><a href="admin.php?page=wc-admin&amp;path=/analytics/categories">Categories</a></li><li><a href="admin.php?page=wc-admin&amp;path=/analytics/coupons">Coupons</a></li><li><a href="admin.php?page=wc-admin&amp;path=/analytics/taxes">Taxes</a></li><li><a href="admin.php?page=wc-admin&amp;path=/analytics/downloads">Downloads</a></li><li><a href="admin.php?page=wc-admin&amp;path=/analytics/stock">Stock</a></li><li><a href="admin.php?page=wc-admin&amp;path=/analytics/settings">Settings</a></li></ul></li>
+<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_woocommerce-marketing menu-top-last" id="toplevel_page_woocommerce-marketing">
+<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_woocommerce-marketing menu-top-last" href="admin.php?page=wc-admin&amp;path=/marketing"><div class="wp-menu-arrow"><div></div></div><div aria-hidden="true" class="wp-menu-image dashicons-before dashicons-megaphone"><br/></div><div class="wp-menu-name">Marketing</div></a>
+<ul class="wp-submenu wp-submenu-wrap"><li aria-hidden="true" class="wp-submenu-head">Marketing</li><li class="wp-first-item"><a class="wp-first-item" href="admin.php?page=wc-admin&amp;path=/marketing">Overview</a></li></ul></li>
+<li aria-hidden="true" class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
+<li class="wp-not-current-submenu menu-top menu-icon-users menu-top-first" id="menu-users">
+<a class="wp-not-current-submenu menu-top menu-icon-users menu-top-first" href="profile.php"><div class="wp-menu-arrow"><div></div></div><div aria-hidden="true" class="wp-menu-image dashicons-before dashicons-admin-users"><br/></div><div class="wp-menu-name">Profile</div></a></li>
+<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools menu-top-last" id="menu-tools">
+<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools menu-top-last" href="import.php"><div class="wp-menu-arrow"><div></div></div><div aria-hidden="true" class="wp-menu-image dashicons-before dashicons-admin-tools"><br/></div><div class="wp-menu-name">Tools</div></a>
+<ul class="wp-submenu wp-submenu-wrap"><li aria-hidden="true" class="wp-submenu-head">Tools</li><li class="wp-first-item"><a class="wp-first-item" href="import.php">Import</a></li><li><a href="export.php">Export</a></li></ul></li><li class="hide-if-no-js" id="collapse-menu"><button aria-expanded="true" aria-label="Collapse Main menu" id="collapse-button" type="button"><span aria-hidden="true" class="collapse-button-icon"></span><span class="collapse-button-label">Collapse menu</span></button></li></ul>
+</div>
+</div>
+<div id="wpcontent">
+<div class="nojq nojs" id="wpadminbar">
+<div aria-label="Toolbar" class="quicklinks" id="wp-toolbar" role="navigation">
+<ul class="ab-top-menu" id="wp-admin-bar-root-default"><li id="wp-admin-bar-menu-toggle"><a class="ab-item" href="#"><span aria-hidden="true" class="ab-icon"></span><span class="screen-reader-text">Menu</span></a></li><li class="menupop" id="wp-admin-bar-site-name"><a aria-haspopup="true" class="ab-item" href="https://curilic.com/">Happy Shop</a><div class="ab-sub-wrapper"><ul class="ab-submenu" id="wp-admin-bar-site-name-default"><li id="wp-admin-bar-view-site"><a class="ab-item" href="https://curilic.com/">Visit Site</a></li><li id="wp-admin-bar-view-store"><a class="ab-item" href="https://curilic.com/collections/">Visit Store</a></li></ul></div></li><li class="menupop" id="wp-admin-bar-new-content"><a aria-haspopup="true" class="ab-item" href="https://curilic.com/wp-admin/media-new.php"><span aria-hidden="true" class="ab-icon"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul class="ab-submenu" id="wp-admin-bar-new-content-default"><li id="wp-admin-bar-new-media"><a class="ab-item" href="https://curilic.com/wp-admin/media-new.php">Media</a></li><li id="wp-admin-bar-new-product"><a class="ab-item" href="https://curilic.com/wp-admin/post-new.php?post_type=product">Product</a></li></ul></div></li><li id="wp-admin-bar-asiup-menu"><div class="ab-item ab-empty-item">Asiup Dropship</div></li></ul><ul class="ab-top-secondary ab-top-menu" id="wp-admin-bar-top-secondary"><li class="menupop with-avatar" id="wp-admin-bar-my-account"><a aria-haspopup="true" class="ab-item" href="https://curilic.com/wp-admin/profile.php">Howdy, <span class="display-name">Sell Nam Venus</span><img alt="" class="avatar avatar-26 photo" height="26" loading="lazy" src="https://secure.gravatar.com/avatar/a646e306e49d8af9d9a06f7671e5ce1c?s=26&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/a646e306e49d8af9d9a06f7671e5ce1c?s=52&amp;d=mm&amp;r=g 2x" width="26"/></a><div class="ab-sub-wrapper"><ul class="ab-submenu" id="wp-admin-bar-user-actions"><li id="wp-admin-bar-user-info"><a class="ab-item" href="https://curilic.com/wp-admin/profile.php" tabindex="-1"><img alt="" class="avatar avatar-64 photo" height="64" loading="lazy" src="https://secure.gravatar.com/avatar/a646e306e49d8af9d9a06f7671e5ce1c?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/a646e306e49d8af9d9a06f7671e5ce1c?s=128&amp;d=mm&amp;r=g 2x" width="64"/><span class="display-name">Sell Nam Venus</span><span class="username">namvenus</span></a></li><li id="wp-admin-bar-edit-profile"><a class="ab-item" href="https://curilic.com/wp-admin/profile.php">Edit Profile</a></li><li id="wp-admin-bar-logout"><a class="ab-item" href="https://curilic.com/wp-login.php?action=logout&amp;_wpnonce=d029b73738">Log Out</a></li></ul></div></li></ul> </div>
+<a class="screen-reader-shortcut" href="https://curilic.com/wp-login.php?action=logout&amp;_wpnonce=d029b73738">Log Out</a>
+</div>
+<div id="wpbody" role="main">
+<div id="wpbody-content">
+<div class="metabox-prefs" id="screen-meta">
+<div aria-label="Contextual Help Tab" class="hidden no-sidebar" id="contextual-help-wrap" tabindex="-1">
+<div id="contextual-help-back"></div>
+<div id="contextual-help-columns">
+<div class="contextual-help-tabs">
+<ul>
+</ul>
+</div>
+<div class="contextual-help-tabs-wrap">
+</div>
+</div>
+</div>
+</div>
+<div class="notice hide-if-js" id="dobby">
+<p>
+<span>✨</span>
+					Dropshiping Platform v3.0.1 / Time GMT-8
+				</p>
+</div>
+<div class="hide-if-js" id="dobby-closet">
+<div class="woocommerce-layout__notice-list-hide" id="wp__notice-list"><div class="wp-header-end" id="woocommerce-layout__notice-catcher"></div><div class="updated notice updater-dismissible" id="angelleye-updater-notice"><p><a href="https://curilic.com/wp-admin/update.php?action=install-plugin&amp;plugin=angelleye-updater&amp;_wpnonce=db8b9a7e10">Install the Angell EYE Updater plugin</a> to get updates for your Angell EYE plugins.</p><button class="notice-dismiss" type="button"><span class="screen-reader-text">Dismiss this notice.</span></button></div>
+<div class="notice notice-success angelleye-notice" id="angelleye_notification_3_0_0"><div class="angelleye-notice-logo-push"><span> <img src="https://www.angelleye.com/wp-content/uploads/2019/12/angelleye-icon-25x25.png"/> </span></div><div class="angelleye-notice-message"><h3>PayPal for WooCommerce v3.0 Important Information!</h3><div class="angelleye-notice-message-inner"><p>This update adds PayPal's new "Complete Payments" gateway.  We also still support the "Classic" payment gateways. It is recommended that you use Complete Payments where possible, but some limitations may apply.</p><div class="angelleye-notice-action"><a class="button button-primary" href="https://www.angelleye.com/paypal-complete-payments/?utm_source=paypal_for_woocommerce&amp;utm_medium=docs_link&amp;utm_campaign=paypal_for_woocommerce" target="_blank">More Info</a>   <a class="button button-primary" href="https://www.angelleye.com/paypal-complete-payments/?utm_source=paypal_for_woocommerce&amp;utm_medium=docs_link&amp;utm_campaign=paypal_for_woocommerce#switchfrompaypalclassic2" target="_blank">Switching from Classic Express Checkout?</a></div></div></div><div class="angelleye-notice-cta"><button class="angelleye-notice-dismiss angelleye-dismiss-welcome" data-msg="angelleye_notification_3_0_0">Dismiss</button></div></div> <div class="wt_smart_coupon_review_request notice-info notice is-dismissible">
+<h3 style="margin: 10px 0;">Smart Coupons for WooCommerce</h3>
+<p>
+                Hey, we at <b>WebToffee</b> would like to thank you for using our plugin. We would really appreciate if you could take a moment to drop a quick review that will inspire us to keep going.            </p>
+<p>
+<a class="button button-primary" data-type="review">Review now</a>
+<a class="button button-secondary" data-type="later" style="color:#333; border-color:#ccc; background:#efefef;">Remind me later</a>
+</p>
+<div class="wt-smart-coupon-review-footer" style="position: relative;">
+<span class="wt-smart-coupon-footer-icon" style="position: absolute;right: 0;bottom: 10px;"><img src="https://curilic.com/wp-content/plugins/wt-smart-coupons-for-woocommerce/images/webtoffee-logo_small.png" style="max-width:100px;"/></span>
+</div>
+</div>
+<div class="villatheme-dashboard error">
+<div class="villatheme-content">
+<p>Hello! Would you like to receive automatic update? Please activate your copy of <strong>WooCommerce Orders Tracking Premium</strong></p>
+<p>
+<a class="button button-primary" href="https://curilic.com/wp-admin/admin.php?page=woocommerce-orders-tracking#update">Activate</a>
+<a class="button" href="/wp-admin/admin.php?page=wc-admin&amp;path=%2Fanalytics%2Foverview&amp;period=custom&amp;compare=previous_year&amp;after=2022-10-13&amp;before=2022-10-16&amp;woocommerce-orders-tracking_hide=1">Hide</a>
+</p>
+<a class="button notice-dismiss vi-button-dismiss" href="/wp-admin/admin.php?page=wc-admin&amp;path=%2Fanalytics%2Foverview&amp;period=custom&amp;compare=previous_year&amp;after=2022-10-13&amp;before=2022-10-16&amp;woocommerce-orders-tracking_dismiss_notices=1" target="_self">Dismiss</a>
+</div>
+</div>
+<div class="js-wc-sequential-order-numbers-pro-admin-notice-placeholder"></div></div> </div>
+<div class="wrap">
+<div id="root"></div>
+</div>
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+<div id="wpfooter" role="contentinfo">
+<p class="alignleft" id="footer-left">
+		Thank you for creating with <a href="https://wordpress.org/">WordPress</a> and <a href="https://nexcess.net">Nexcess</a>.	</p>
+<p class="alignright" id="footer-upgrade">
+		Version 6.0.2	</p>
+<div class="clear"></div>
+</div>
+<script id="tmpl-woo_variation_swatches_shape_style" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Shape Style</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-01.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/" class="button button-primary">See Documentation</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/tickets/">Help &amp; Support</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_default_to_button" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Default To Button</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-02.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/" class="button button-primary">See Documentation</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/tickets/">Help &amp; Support</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_default_to_image" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Default To Image</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-03.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_clear_on_reselect" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Clear on Reselect</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-04.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/" class="button button-primary">See Documentation</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/tickets/">Help &amp; Support</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_hide_out_of_stock_variation" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Hide Out Of Stock</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-05.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_clickable_out_of_stock_variation" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Clickable Out Of Stock</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-06.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_show_variation_stock_info" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Show variation stock info</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-07.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_display_limit" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Attribute Display Limit</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-08.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_archive_show_availability" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Show Product Availability</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-09.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/" class="button button-primary">See Documentation</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/tickets/">Help &amp; Support</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_archive_swatches_position" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Display Position</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-10.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_show_swatches_on_filter_widget" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Display On Widget</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-11.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_enable_catalog_mode" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Show as catalog mode</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-12.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_enable_single_variation_preview" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Show variation preview</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-13.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_enable_large_size" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Show variation preview</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-14.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_archive_align" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Show variation preview</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-15.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_attribute_behavior" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Disabled Attribute style</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-16.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/" class="button button-primary">See Documentation</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/tickets/">Help &amp; Support</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_enable_linkable_variation_url" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Generate Sharable URL</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-17.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_license" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches License</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-18.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/my-account/downloads/" class="button button-primary">Get license</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/tickets/">Help &amp; Support</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_show_on_archive" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches On Archive Page</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-19.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-woo_variation_swatches_archive_default_selected" type="text/template">
+    <div class="gwp-backbone-modal gwp-pro-dialog">
+        <div class="gwp-backbone-modal-content">
+            <section class="gwp-backbone-modal-main" role="main">
+                <header class="gwp-backbone-modal-header">
+                    <h1>Swatches Archive Default Selected</h1>
+                    <button class="modal-close modal-close-link dashicons dashicons-no-alt">
+                        <span class="screen-reader-text">Close modal panel</span>
+                    </button>
+                </header>
+                <article>
+                    <div class="gwp-dialog-form-body">
+                        <!--
+                        USE video-wrapper for iframe video like: youtube / vimeo
+                        <div class="video-wrapper">
+                        <iframe src="..."></iframe>
+                        </div>
+                        -->
+                        <video preload="auto" autoplay loop muted playsinline src="https://ps.w.org/woo-variation-swatches/assets/preview-20.webm?ver=2.0.8"></video>                    </div>
+                </article>
+                                    <footer>
+                        <div class="inner">
+                                                            <div class="gwp-action-button-group">
+                                    <a target="_blank" href="https://getwooplugins.com/plugins/woocommerce-variation-swatches/" class="button button-danger">Buy Now</a>
+                                </div>
+
+                                                            <a target="_blank" href="https://getwooplugins.com/documentation/woocommerce-variation-swatches/">See Documentation</a>
+                                                    </div>
+                    </footer>
+                            </section>
+        </div>
+    </div>
+    <div class="gwp-backbone-modal-backdrop modal-close"></div>
+</script>
+<script id="tmpl-media-frame" type="text/html">
+		<div class="media-frame-title" id="media-frame-title"></div>
+		<h2 class="media-frame-menu-heading">Actions</h2>
+		<button type="button" class="button button-link media-frame-menu-toggle" aria-expanded="false">
+			Menu			<span class="dashicons dashicons-arrow-down" aria-hidden="true"></span>
+		</button>
+		<div class="media-frame-menu"></div>
+		<div class="media-frame-tab-panel">
+			<div class="media-frame-router"></div>
+			<div class="media-frame-content"></div>
+		</div>
+		<h2 class="media-frame-actions-heading screen-reader-text">
+		Selected media actions		</h2>
+		<div class="media-frame-toolbar"></div>
+		<div class="media-frame-uploader"></div>
+	</script>
+<script id="tmpl-media-modal" type="text/html">
+		<div tabindex="0" class="media-modal wp-core-ui" role="dialog" aria-labelledby="media-frame-title">
+			<# if ( data.hasCloseButton ) { #>
+				<button type="button" class="media-modal-close"><span class="media-modal-icon"><span class="screen-reader-text">Close dialog</span></span></button>
+			<# } #>
+			<div class="media-modal-content" role="document"></div>
+		</div>
+		<div class="media-modal-backdrop"></div>
+	</script>
+<script id="tmpl-uploader-window" type="text/html">
+		<div class="uploader-window-content">
+			<div class="uploader-editor-title">Drop files to upload</div>
+		</div>
+	</script>
+<script id="tmpl-uploader-editor" type="text/html">
+		<div class="uploader-editor-content">
+			<div class="uploader-editor-title">Drop files to upload</div>
+		</div>
+	</script>
+<script id="tmpl-uploader-inline" type="text/html">
+		<# var messageClass = data.message ? 'has-upload-message' : 'no-upload-message'; #>
+		<# if ( data.canClose ) { #>
+		<button class="close dashicons dashicons-no"><span class="screen-reader-text">Close uploader</span></button>
+		<# } #>
+		<div class="uploader-inline-content {{ messageClass }}">
+		<# if ( data.message ) { #>
+			<h2 class="upload-message">{{ data.message }}</h2>
+		<# } #>
+					<div class="upload-ui">
+				<h2 class="upload-instructions drop-instructions">Drop files to upload</h2>
+				<p class="upload-instructions drop-instructions">or</p>
+				<button type="button" class="browser button button-hero" aria-labelledby="post-upload-info">Select Files</button>
+			</div>
+
+			<div class="upload-inline-status"></div>
+
+			<div class="post-upload-ui" id="post-upload-info">
+
+				<p class="max-upload-size">
+				Maximum upload file size: 2 GB.				</p>
+
+				<# if ( data.suggestedWidth && data.suggestedHeight ) { #>
+					<p class="suggested-dimensions">
+						Suggested image dimensions: {{data.suggestedWidth}} by {{data.suggestedHeight}} pixels.					</p>
+				<# } #>
+
+							</div>
+				</div>
+	</script>
+<script id="tmpl-media-library-view-switcher" type="text/html">
+		<a href="https://curilic.com/wp-admin/upload.php?mode=list" class="view-list">
+			<span class="screen-reader-text">List view</span>
+		</a>
+		<a href="https://curilic.com/wp-admin/upload.php?mode=grid" class="view-grid current" aria-current="page">
+			<span class="screen-reader-text">Grid view</span>
+		</a>
+	</script>
+<script id="tmpl-uploader-status" type="text/html">
+		<h2>Uploading</h2>
+
+		<div class="media-progress-bar"><div></div></div>
+		<div class="upload-details">
+			<span class="upload-count">
+				<span class="upload-index"></span> / <span class="upload-total"></span>
+			</span>
+			<span class="upload-detail-separator">&ndash;</span>
+			<span class="upload-filename"></span>
+		</div>
+		<div class="upload-errors"></div>
+		<button type="button" class="button upload-dismiss-errors">Dismiss errors</button>
+	</script>
+<script id="tmpl-uploader-status-error" type="text/html">
+		<span class="upload-error-filename">{{{ data.filename }}}</span>
+		<span class="upload-error-message">{{ data.message }}</span>
+	</script>
+<script id="tmpl-edit-attachment-frame" type="text/html">
+		<div class="edit-media-header">
+			<button class="left dashicons"<# if ( ! data.hasPrevious ) { #> disabled<# } #>><span class="screen-reader-text">Edit previous media item</span></button>
+			<button class="right dashicons"<# if ( ! data.hasNext ) { #> disabled<# } #>><span class="screen-reader-text">Edit next media item</span></button>
+			<button type="button" class="media-modal-close"><span class="media-modal-icon"><span class="screen-reader-text">Close dialog</span></span></button>
+		</div>
+		<div class="media-frame-title"></div>
+		<div class="media-frame-content"></div>
+	</script>
+<script id="tmpl-attachment-details-two-column" type="text/html">
+		<div class="attachment-media-view {{ data.orientation }}">
+			<h2 class="screen-reader-text">Attachment Preview</h2>
+			<div class="thumbnail thumbnail-{{ data.type }}">
+				<# if ( data.uploading ) { #>
+					<div class="media-progress-bar"><div></div></div>
+				<# } else if ( data.sizes && data.sizes.large ) { #>
+					<img class="details-image" src="{{ data.sizes.large.url }}" draggable="false" alt="" />
+				<# } else if ( data.sizes && data.sizes.full ) { #>
+					<img class="details-image" src="{{ data.sizes.full.url }}" draggable="false" alt="" />
+				<# } else if ( -1 === jQuery.inArray( data.type, [ 'audio', 'video' ] ) ) { #>
+					<img class="details-image icon" src="{{ data.icon }}" draggable="false" alt="" />
+				<# } #>
+
+				<# if ( 'audio' === data.type ) { #>
+				<div class="wp-media-wrapper wp-audio">
+					<audio style="visibility: hidden" controls class="wp-audio-shortcode" width="100%" preload="none">
+						<source type="{{ data.mime }}" src="{{ data.url }}" />
+					</audio>
+				</div>
+				<# } else if ( 'video' === data.type ) {
+					var w_rule = '';
+					if ( data.width ) {
+						w_rule = 'width: ' + data.width + 'px;';
+					} else if ( wp.media.view.settings.contentWidth ) {
+						w_rule = 'width: ' + wp.media.view.settings.contentWidth + 'px;';
+					}
+				#>
+				<div style="{{ w_rule }}" class="wp-media-wrapper wp-video">
+					<video controls="controls" class="wp-video-shortcode" preload="metadata"
+						<# if ( data.width ) { #>width="{{ data.width }}"<# } #>
+						<# if ( data.height ) { #>height="{{ data.height }}"<# } #>
+						<# if ( data.image && data.image.src !== data.icon ) { #>poster="{{ data.image.src }}"<# } #>>
+						<source type="{{ data.mime }}" src="{{ data.url }}" />
+					</video>
+				</div>
+				<# } #>
+
+				<div class="attachment-actions">
+					<# if ( 'image' === data.type && ! data.uploading && data.sizes && data.can.save ) { #>
+					<button type="button" class="button edit-attachment">Edit Image</button>
+					<# } else if ( 'pdf' === data.subtype && data.sizes ) { #>
+					<p>Document Preview</p>
+					<# } #>
+				</div>
+			</div>
+		</div>
+		<div class="attachment-info">
+			<span class="settings-save-status" role="status">
+				<span class="spinner"></span>
+				<span class="saved">Saved.</span>
+			</span>
+			<div class="details">
+				<h2 class="screen-reader-text">Details</h2>
+				<div class="uploaded"><strong>Uploaded on:</strong> {{ data.dateFormatted }}</div>
+				<div class="uploaded-by">
+					<strong>Uploaded by:</strong>
+						<# if ( data.authorLink ) { #>
+							<a href="{{ data.authorLink }}">{{ data.authorName }}</a>
+						<# } else { #>
+							{{ data.authorName }}
+						<# } #>
+				</div>
+				<# if ( data.uploadedToTitle ) { #>
+					<div class="uploaded-to">
+						<strong>Uploaded to:</strong>
+						<# if ( data.uploadedToLink ) { #>
+							<a href="{{ data.uploadedToLink }}">{{ data.uploadedToTitle }}</a>
+						<# } else { #>
+							{{ data.uploadedToTitle }}
+						<# } #>
+					</div>
+				<# } #>
+				<div class="filename"><strong>File name:</strong> {{ data.filename }}</div>
+				<div class="file-type"><strong>File type:</strong> {{ data.mime }}</div>
+				<div class="file-size"><strong>File size:</strong> {{ data.filesizeHumanReadable }}</div>
+				<# if ( 'image' === data.type && ! data.uploading ) { #>
+					<# if ( data.width && data.height ) { #>
+						<div class="dimensions"><strong>Dimensions:</strong>
+							{{ data.width }} by {{ data.height }} pixels						</div>
+					<# } #>
+
+					<# if ( data.originalImageURL && data.originalImageName ) { #>
+						Original image:						<a href="{{ data.originalImageURL }}">{{data.originalImageName}}</a>
+					<# } #>
+				<# } #>
+
+				<# if ( data.fileLength && data.fileLengthHumanReadable ) { #>
+					<div class="file-length"><strong>Length:</strong>
+						<span aria-hidden="true">{{ data.fileLength }}</span>
+						<span class="screen-reader-text">{{ data.fileLengthHumanReadable }}</span>
+					</div>
+				<# } #>
+
+				<# if ( 'audio' === data.type && data.meta.bitrate ) { #>
+					<div class="bitrate">
+						<strong>Bitrate:</strong> {{ Math.round( data.meta.bitrate / 1000 ) }}kb/s
+						<# if ( data.meta.bitrate_mode ) { #>
+						{{ ' ' + data.meta.bitrate_mode.toUpperCase() }}
+						<# } #>
+					</div>
+				<# } #>
+
+				<# if ( data.mediaStates ) { #>
+					<div class="media-states"><strong>Used as:</strong> {{ data.mediaStates }}</div>
+				<# } #>
+
+				<div class="compat-meta">
+					<# if ( data.compat && data.compat.meta ) { #>
+						{{{ data.compat.meta }}}
+					<# } #>
+				</div>
+			</div>
+
+			<div class="settings">
+				<# var maybeReadOnly = data.can.save || data.allowLocalEdits ? '' : 'readonly'; #>
+				<# if ( 'image' === data.type ) { #>
+					<span class="setting has-description" data-setting="alt">
+						<label for="attachment-details-two-column-alt-text" class="name">Alternative Text</label>
+						<input type="text" id="attachment-details-two-column-alt-text" value="{{ data.alt }}" aria-describedby="alt-text-description" {{ maybeReadOnly }} />
+					</span>
+					<p class="description" id="alt-text-description"><a href="https://www.w3.org/WAI/tutorials/images/decision-tree" target="_blank" rel="noopener">Learn how to describe the purpose of the image<span class="screen-reader-text"> (opens in a new tab)</span></a>. Leave empty if the image is purely decorative.</p>
+				<# } #>
+								<span class="setting" data-setting="title">
+					<label for="attachment-details-two-column-title" class="name">Title</label>
+					<input type="text" id="attachment-details-two-column-title" value="{{ data.title }}" {{ maybeReadOnly }} />
+				</span>
+								<# if ( 'audio' === data.type ) { #>
+								<span class="setting" data-setting="artist">
+					<label for="attachment-details-two-column-artist" class="name">Artist</label>
+					<input type="text" id="attachment-details-two-column-artist" value="{{ data.artist || data.meta.artist || '' }}" />
+				</span>
+								<span class="setting" data-setting="album">
+					<label for="attachment-details-two-column-album" class="name">Album</label>
+					<input type="text" id="attachment-details-two-column-album" value="{{ data.album || data.meta.album || '' }}" />
+				</span>
+								<# } #>
+				<span class="setting" data-setting="caption">
+					<label for="attachment-details-two-column-caption" class="name">Caption</label>
+					<textarea id="attachment-details-two-column-caption" {{ maybeReadOnly }}>{{ data.caption }}</textarea>
+				</span>
+				<span class="setting" data-setting="description">
+					<label for="attachment-details-two-column-description" class="name">Description</label>
+					<textarea id="attachment-details-two-column-description" {{ maybeReadOnly }}>{{ data.description }}</textarea>
+				</span>
+				<span class="setting" data-setting="url">
+					<label for="attachment-details-two-column-copy-link" class="name">File URL:</label>
+					<input type="text" class="attachment-details-copy-link" id="attachment-details-two-column-copy-link" value="{{ data.url }}" readonly />
+					<span class="copy-to-clipboard-container">
+						<button type="button" class="button button-small copy-attachment-url" data-clipboard-target="#attachment-details-two-column-copy-link">Copy URL to clipboard</button>
+						<span class="success hidden" aria-hidden="true">Copied!</span>
+					</span>
+				</span>
+				<div class="attachment-compat"></div>
+			</div>
+
+			<div class="actions">
+				<# if ( data.link ) { #>
+					<a class="view-attachment" href="{{ data.link }}">View attachment page</a>
+				<# } #>
+				<# if ( data.can.save ) { #>
+					<# if ( data.link ) { #>
+						<span class="links-separator">|</span>
+					<# } #>
+					<a href="{{ data.editLink }}">Edit more details</a>
+				<# } #>
+				<# if ( ! data.uploading && data.can.remove ) { #>
+					<# if ( data.link || data.can.save ) { #>
+						<span class="links-separator">|</span>
+					<# } #>
+											<button type="button" class="button-link delete-attachment">Delete permanently</button>
+									<# } #>
+			</div>
+		</div>
+	</script>
+<script id="tmpl-attachment" type="text/html">
+		<div class="attachment-preview js--select-attachment type-{{ data.type }} subtype-{{ data.subtype }} {{ data.orientation }}">
+			<div class="thumbnail">
+				<# if ( data.uploading ) { #>
+					<div class="media-progress-bar"><div style="width: {{ data.percent }}%"></div></div>
+				<# } else if ( 'image' === data.type && data.size && data.size.url ) { #>
+					<div class="centered">
+						<img src="{{ data.size.url }}" draggable="false" alt="" />
+					</div>
+				<# } else { #>
+					<div class="centered">
+						<# if ( data.image && data.image.src && data.image.src !== data.icon ) { #>
+							<img src="{{ data.image.src }}" class="thumbnail" draggable="false" alt="" />
+						<# } else if ( data.sizes && data.sizes.medium ) { #>
+							<img src="{{ data.sizes.medium.url }}" class="thumbnail" draggable="false" alt="" />
+						<# } else { #>
+							<img src="{{ data.icon }}" class="icon" draggable="false" alt="" />
+						<# } #>
+					</div>
+					<div class="filename">
+						<div>{{ data.filename }}</div>
+					</div>
+				<# } #>
+			</div>
+			<# if ( data.buttons.close ) { #>
+				<button type="button" class="button-link attachment-close media-modal-icon"><span class="screen-reader-text">Remove</span></button>
+			<# } #>
+		</div>
+		<# if ( data.buttons.check ) { #>
+			<button type="button" class="check" tabindex="-1"><span class="media-modal-icon"></span><span class="screen-reader-text">Deselect</span></button>
+		<# } #>
+		<#
+		var maybeReadOnly = data.can.save || data.allowLocalEdits ? '' : 'readonly';
+		if ( data.describe ) {
+			if ( 'image' === data.type ) { #>
+				<input type="text" value="{{ data.caption }}" class="describe" data-setting="caption"
+					aria-label="Caption"
+					placeholder="Caption&hellip;" {{ maybeReadOnly }} />
+			<# } else { #>
+				<input type="text" value="{{ data.title }}" class="describe" data-setting="title"
+					<# if ( 'video' === data.type ) { #>
+						aria-label="Video title"
+						placeholder="Video title&hellip;"
+					<# } else if ( 'audio' === data.type ) { #>
+						aria-label="Audio title"
+						placeholder="Audio title&hellip;"
+					<# } else { #>
+						aria-label="Media title"
+						placeholder="Media title&hellip;"
+					<# } #> {{ maybeReadOnly }} />
+			<# }
+		} #>
+	</script>
+<script id="tmpl-attachment-details" type="text/html">
+		<h2>
+			Attachment Details			<span class="settings-save-status" role="status">
+				<span class="spinner"></span>
+				<span class="saved">Saved.</span>
+			</span>
+		</h2>
+		<div class="attachment-info">
+
+			<# if ( 'audio' === data.type ) { #>
+				<div class="wp-media-wrapper wp-audio">
+					<audio style="visibility: hidden" controls class="wp-audio-shortcode" width="100%" preload="none">
+						<source type="{{ data.mime }}" src="{{ data.url }}" />
+					</audio>
+				</div>
+			<# } else if ( 'video' === data.type ) {
+				var w_rule = '';
+				if ( data.width ) {
+					w_rule = 'width: ' + data.width + 'px;';
+				} else if ( wp.media.view.settings.contentWidth ) {
+					w_rule = 'width: ' + wp.media.view.settings.contentWidth + 'px;';
+				}
+			#>
+				<div style="{{ w_rule }}" class="wp-media-wrapper wp-video">
+					<video controls="controls" class="wp-video-shortcode" preload="metadata"
+						<# if ( data.width ) { #>width="{{ data.width }}"<# } #>
+						<# if ( data.height ) { #>height="{{ data.height }}"<# } #>
+						<# if ( data.image && data.image.src !== data.icon ) { #>poster="{{ data.image.src }}"<# } #>>
+						<source type="{{ data.mime }}" src="{{ data.url }}" />
+					</video>
+				</div>
+			<# } else { #>
+				<div class="thumbnail thumbnail-{{ data.type }}">
+					<# if ( data.uploading ) { #>
+						<div class="media-progress-bar"><div></div></div>
+					<# } else if ( 'image' === data.type && data.size && data.size.url ) { #>
+						<img src="{{ data.size.url }}" draggable="false" alt="" />
+					<# } else { #>
+						<img src="{{ data.icon }}" class="icon" draggable="false" alt="" />
+					<# } #>
+				</div>
+			<# } #>
+
+			<div class="details">
+				<div class="filename">{{ data.filename }}</div>
+				<div class="uploaded">{{ data.dateFormatted }}</div>
+
+				<div class="file-size">{{ data.filesizeHumanReadable }}</div>
+				<# if ( 'image' === data.type && ! data.uploading ) { #>
+					<# if ( data.width && data.height ) { #>
+						<div class="dimensions">
+							{{ data.width }} by {{ data.height }} pixels						</div>
+					<# } #>
+
+					<# if ( data.originalImageURL && data.originalImageName ) { #>
+						Original image:						<a href="{{ data.originalImageURL }}">{{data.originalImageName}}</a>
+					<# } #>
+
+					<# if ( data.can.save && data.sizes ) { #>
+						<a class="edit-attachment" href="{{ data.editLink }}&amp;image-editor" target="_blank">Edit Image</a>
+					<# } #>
+				<# } #>
+
+				<# if ( data.fileLength && data.fileLengthHumanReadable ) { #>
+					<div class="file-length">Length:						<span aria-hidden="true">{{ data.fileLength }}</span>
+						<span class="screen-reader-text">{{ data.fileLengthHumanReadable }}</span>
+					</div>
+				<# } #>
+
+				<# if ( data.mediaStates ) { #>
+					<div class="media-states"><strong>Used as:</strong> {{ data.mediaStates }}</div>
+				<# } #>
+
+				<# if ( ! data.uploading && data.can.remove ) { #>
+											<button type="button" class="button-link delete-attachment">Delete permanently</button>
+									<# } #>
+
+				<div class="compat-meta">
+					<# if ( data.compat && data.compat.meta ) { #>
+						{{{ data.compat.meta }}}
+					<# } #>
+				</div>
+			</div>
+		</div>
+		<# var maybeReadOnly = data.can.save || data.allowLocalEdits ? '' : 'readonly'; #>
+		<# if ( 'image' === data.type ) { #>
+			<span class="setting has-description" data-setting="alt">
+				<label for="attachment-details-alt-text" class="name">Alt Text</label>
+				<input type="text" id="attachment-details-alt-text" value="{{ data.alt }}" aria-describedby="alt-text-description" {{ maybeReadOnly }} />
+			</span>
+			<p class="description" id="alt-text-description"><a href="https://www.w3.org/WAI/tutorials/images/decision-tree" target="_blank" rel="noopener">Learn how to describe the purpose of the image<span class="screen-reader-text"> (opens in a new tab)</span></a>. Leave empty if the image is purely decorative.</p>
+		<# } #>
+				<span class="setting" data-setting="title">
+			<label for="attachment-details-title" class="name">Title</label>
+			<input type="text" id="attachment-details-title" value="{{ data.title }}" {{ maybeReadOnly }} />
+		</span>
+				<# if ( 'audio' === data.type ) { #>
+				<span class="setting" data-setting="artist">
+			<label for="attachment-details-artist" class="name">Artist</label>
+			<input type="text" id="attachment-details-artist" value="{{ data.artist || data.meta.artist || '' }}" />
+		</span>
+				<span class="setting" data-setting="album">
+			<label for="attachment-details-album" class="name">Album</label>
+			<input type="text" id="attachment-details-album" value="{{ data.album || data.meta.album || '' }}" />
+		</span>
+				<# } #>
+		<span class="setting" data-setting="caption">
+			<label for="attachment-details-caption" class="name">Caption</label>
+			<textarea id="attachment-details-caption" {{ maybeReadOnly }}>{{ data.caption }}</textarea>
+		</span>
+		<span class="setting" data-setting="description">
+			<label for="attachment-details-description" class="name">Description</label>
+			<textarea id="attachment-details-description" {{ maybeReadOnly }}>{{ data.description }}</textarea>
+		</span>
+		<span class="setting" data-setting="url">
+			<label for="attachment-details-copy-link" class="name">File URL:</label>
+			<input type="text" class="attachment-details-copy-link" id="attachment-details-copy-link" value="{{ data.url }}" readonly />
+			<div class="copy-to-clipboard-container">
+				<button type="button" class="button button-small copy-attachment-url" data-clipboard-target="#attachment-details-copy-link">Copy URL to clipboard</button>
+				<span class="success hidden" aria-hidden="true">Copied!</span>
+			</div>
+		</span>
+	</script>
+<script id="tmpl-media-selection" type="text/html">
+		<div class="selection-info">
+			<span class="count"></span>
+			<# if ( data.editable ) { #>
+				<button type="button" class="button-link edit-selection">Edit Selection</button>
+			<# } #>
+			<# if ( data.clearable ) { #>
+				<button type="button" class="button-link clear-selection">Clear</button>
+			<# } #>
+		</div>
+		<div class="selection-view"></div>
+	</script>
+<script id="tmpl-attachment-display-settings" type="text/html">
+		<h2>Attachment Display Settings</h2>
+
+		<# if ( 'image' === data.type ) { #>
+			<span class="setting align">
+				<label for="attachment-display-settings-alignment" class="name">Alignment</label>
+				<select id="attachment-display-settings-alignment" class="alignment"
+					data-setting="align"
+					<# if ( data.userSettings ) { #>
+						data-user-setting="align"
+					<# } #>>
+
+					<option value="left">
+						Left					</option>
+					<option value="center">
+						Center					</option>
+					<option value="right">
+						Right					</option>
+					<option value="none" selected>
+						None					</option>
+				</select>
+			</span>
+		<# } #>
+
+		<span class="setting">
+			<label for="attachment-display-settings-link-to" class="name">
+				<# if ( data.model.canEmbed ) { #>
+					Embed or Link				<# } else { #>
+					Link To				<# } #>
+			</label>
+			<select id="attachment-display-settings-link-to" class="link-to"
+				data-setting="link"
+				<# if ( data.userSettings && ! data.model.canEmbed ) { #>
+					data-user-setting="urlbutton"
+				<# } #>>
+
+			<# if ( data.model.canEmbed ) { #>
+				<option value="embed" selected>
+					Embed Media Player				</option>
+				<option value="file">
+			<# } else { #>
+				<option value="none" selected>
+					None				</option>
+				<option value="file">
+			<# } #>
+				<# if ( data.model.canEmbed ) { #>
+					Link to Media File				<# } else { #>
+					Media File				<# } #>
+				</option>
+				<option value="post">
+				<# if ( data.model.canEmbed ) { #>
+					Link to Attachment Page				<# } else { #>
+					Attachment Page				<# } #>
+				</option>
+			<# if ( 'image' === data.type ) { #>
+				<option value="custom">
+					Custom URL				</option>
+			<# } #>
+			</select>
+		</span>
+		<span class="setting">
+			<label for="attachment-display-settings-link-to-custom" class="name">URL</label>
+			<input type="text" id="attachment-display-settings-link-to-custom" class="link-to-custom" data-setting="linkUrl" />
+		</span>
+
+		<# if ( 'undefined' !== typeof data.sizes ) { #>
+			<span class="setting">
+				<label for="attachment-display-settings-size" class="name">Size</label>
+				<select id="attachment-display-settings-size" class="size" name="size"
+					data-setting="size"
+					<# if ( data.userSettings ) { #>
+						data-user-setting="imgsize"
+					<# } #>>
+											<#
+						var size = data.sizes['thumbnail'];
+						if ( size ) { #>
+							<option value="thumbnail" >
+								Thumbnail &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+											<#
+						var size = data.sizes['medium'];
+						if ( size ) { #>
+							<option value="medium" >
+								Medium &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+											<#
+						var size = data.sizes['large'];
+						if ( size ) { #>
+							<option value="large" >
+								Large &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+											<#
+						var size = data.sizes['full'];
+						if ( size ) { #>
+							<option value="full"  selected='selected'>
+								Full Size &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+									</select>
+			</span>
+		<# } #>
+	</script>
+<script id="tmpl-gallery-settings" type="text/html">
+		<h2>Gallery Settings</h2>
+
+		<span class="setting">
+			<label for="gallery-settings-link-to" class="name">Link To</label>
+			<select id="gallery-settings-link-to" class="link-to"
+				data-setting="link"
+				<# if ( data.userSettings ) { #>
+					data-user-setting="urlbutton"
+				<# } #>>
+
+				<option value="post" <# if ( ! wp.media.galleryDefaults.link || 'post' === wp.media.galleryDefaults.link ) {
+					#>selected="selected"<# }
+				#>>
+					Attachment Page				</option>
+				<option value="file" <# if ( 'file' === wp.media.galleryDefaults.link ) { #>selected="selected"<# } #>>
+					Media File				</option>
+				<option value="none" <# if ( 'none' === wp.media.galleryDefaults.link ) { #>selected="selected"<# } #>>
+					None				</option>
+			</select>
+		</span>
+
+		<span class="setting">
+			<label for="gallery-settings-columns" class="name select-label-inline">Columns</label>
+			<select id="gallery-settings-columns" class="columns" name="columns"
+				data-setting="columns">
+									<option value="1" <#
+						if ( 1 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						1					</option>
+									<option value="2" <#
+						if ( 2 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						2					</option>
+									<option value="3" <#
+						if ( 3 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						3					</option>
+									<option value="4" <#
+						if ( 4 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						4					</option>
+									<option value="5" <#
+						if ( 5 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						5					</option>
+									<option value="6" <#
+						if ( 6 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						6					</option>
+									<option value="7" <#
+						if ( 7 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						7					</option>
+									<option value="8" <#
+						if ( 8 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						8					</option>
+									<option value="9" <#
+						if ( 9 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						9					</option>
+							</select>
+		</span>
+
+		<span class="setting">
+			<input type="checkbox" id="gallery-settings-random-order" data-setting="_orderbyRandom" />
+			<label for="gallery-settings-random-order" class="checkbox-label-inline">Random Order</label>
+		</span>
+
+		<span class="setting size">
+			<label for="gallery-settings-size" class="name">Size</label>
+			<select id="gallery-settings-size" class="size" name="size"
+				data-setting="size"
+				<# if ( data.userSettings ) { #>
+					data-user-setting="imgsize"
+				<# } #>
+				>
+									<option value="thumbnail">
+						Thumbnail					</option>
+									<option value="medium">
+						Medium					</option>
+									<option value="large">
+						Large					</option>
+									<option value="full">
+						Full Size					</option>
+							</select>
+		</span>
+	</script>
+<script id="tmpl-playlist-settings" type="text/html">
+		<h2>Playlist Settings</h2>
+
+		<# var emptyModel = _.isEmpty( data.model ),
+			isVideo = 'video' === data.controller.get('library').props.get('type'); #>
+
+		<span class="setting">
+			<input type="checkbox" id="playlist-settings-show-list" data-setting="tracklist" <# if ( emptyModel ) { #>
+				checked="checked"
+			<# } #> />
+			<label for="playlist-settings-show-list" class="checkbox-label-inline">
+				<# if ( isVideo ) { #>
+				Show Video List				<# } else { #>
+				Show Tracklist				<# } #>
+			</label>
+		</span>
+
+		<# if ( ! isVideo ) { #>
+		<span class="setting">
+			<input type="checkbox" id="playlist-settings-show-artist" data-setting="artists" <# if ( emptyModel ) { #>
+				checked="checked"
+			<# } #> />
+			<label for="playlist-settings-show-artist" class="checkbox-label-inline">
+				Show Artist Name in Tracklist			</label>
+		</span>
+		<# } #>
+
+		<span class="setting">
+			<input type="checkbox" id="playlist-settings-show-images" data-setting="images" <# if ( emptyModel ) { #>
+				checked="checked"
+			<# } #> />
+			<label for="playlist-settings-show-images" class="checkbox-label-inline">
+				Show Images			</label>
+		</span>
+	</script>
+<script id="tmpl-embed-link-settings" type="text/html">
+		<span class="setting link-text">
+			<label for="embed-link-settings-link-text" class="name">Link Text</label>
+			<input type="text" id="embed-link-settings-link-text" class="alignment" data-setting="linkText" />
+		</span>
+		<div class="embed-container" style="display: none;">
+			<div class="embed-preview"></div>
+		</div>
+	</script>
+<script id="tmpl-embed-image-settings" type="text/html">
+		<div class="wp-clearfix">
+			<div class="thumbnail">
+				<img src="{{ data.model.url }}" draggable="false" alt="" />
+			</div>
+		</div>
+
+		<span class="setting alt-text has-description">
+			<label for="embed-image-settings-alt-text" class="name">Alternative Text</label>
+			<input type="text" id="embed-image-settings-alt-text" data-setting="alt" aria-describedby="alt-text-description" />
+		</span>
+		<p class="description" id="alt-text-description"><a href="https://www.w3.org/WAI/tutorials/images/decision-tree" target="_blank" rel="noopener">Learn how to describe the purpose of the image<span class="screen-reader-text"> (opens in a new tab)</span></a>. Leave empty if the image is purely decorative.</p>
+
+					<span class="setting caption">
+				<label for="embed-image-settings-caption" class="name">Caption</label>
+				<textarea id="embed-image-settings-caption" data-setting="caption"></textarea>
+			</span>
+
+		<fieldset class="setting-group">
+			<legend class="name">Align</legend>
+			<span class="setting align">
+				<span class="button-group button-large" data-setting="align">
+					<button class="button" value="left">
+						Left					</button>
+					<button class="button" value="center">
+						Center					</button>
+					<button class="button" value="right">
+						Right					</button>
+					<button class="button active" value="none">
+						None					</button>
+				</span>
+			</span>
+		</fieldset>
+
+		<fieldset class="setting-group">
+			<legend class="name">Link To</legend>
+			<span class="setting link-to">
+				<span class="button-group button-large" data-setting="link">
+					<button class="button" value="file">
+						Image URL					</button>
+					<button class="button" value="custom">
+						Custom URL					</button>
+					<button class="button active" value="none">
+						None					</button>
+				</span>
+			</span>
+			<span class="setting">
+				<label for="embed-image-settings-link-to-custom" class="name">URL</label>
+				<input type="text" id="embed-image-settings-link-to-custom" class="link-to-custom" data-setting="linkUrl" />
+			</span>
+		</fieldset>
+	</script>
+<script id="tmpl-image-details" type="text/html">
+		<div class="media-embed">
+			<div class="embed-media-settings">
+				<div class="column-settings">
+					<span class="setting alt-text has-description">
+						<label for="image-details-alt-text" class="name">Alternative Text</label>
+						<input type="text" id="image-details-alt-text" data-setting="alt" value="{{ data.model.alt }}" aria-describedby="alt-text-description" />
+					</span>
+					<p class="description" id="alt-text-description"><a href="https://www.w3.org/WAI/tutorials/images/decision-tree" target="_blank" rel="noopener">Learn how to describe the purpose of the image<span class="screen-reader-text"> (opens in a new tab)</span></a>. Leave empty if the image is purely decorative.</p>
+
+											<span class="setting caption">
+							<label for="image-details-caption" class="name">Caption</label>
+							<textarea id="image-details-caption" data-setting="caption">{{ data.model.caption }}</textarea>
+						</span>
+
+					<h2>Display Settings</h2>
+					<fieldset class="setting-group">
+						<legend class="legend-inline">Align</legend>
+						<span class="setting align">
+							<span class="button-group button-large" data-setting="align">
+								<button class="button" value="left">
+									Left								</button>
+								<button class="button" value="center">
+									Center								</button>
+								<button class="button" value="right">
+									Right								</button>
+								<button class="button active" value="none">
+									None								</button>
+							</span>
+						</span>
+					</fieldset>
+
+					<# if ( data.attachment ) { #>
+						<# if ( 'undefined' !== typeof data.attachment.sizes ) { #>
+							<span class="setting size">
+								<label for="image-details-size" class="name">Size</label>
+								<select id="image-details-size" class="size" name="size"
+									data-setting="size"
+									<# if ( data.userSettings ) { #>
+										data-user-setting="imgsize"
+									<# } #>>
+																			<#
+										var size = data.sizes['thumbnail'];
+										if ( size ) { #>
+											<option value="thumbnail">
+												Thumbnail &ndash; {{ size.width }} &times; {{ size.height }}
+											</option>
+										<# } #>
+																			<#
+										var size = data.sizes['medium'];
+										if ( size ) { #>
+											<option value="medium">
+												Medium &ndash; {{ size.width }} &times; {{ size.height }}
+											</option>
+										<# } #>
+																			<#
+										var size = data.sizes['large'];
+										if ( size ) { #>
+											<option value="large">
+												Large &ndash; {{ size.width }} &times; {{ size.height }}
+											</option>
+										<# } #>
+																			<#
+										var size = data.sizes['full'];
+										if ( size ) { #>
+											<option value="full">
+												Full Size &ndash; {{ size.width }} &times; {{ size.height }}
+											</option>
+										<# } #>
+																		<option value="custom">
+										Custom Size									</option>
+								</select>
+							</span>
+						<# } #>
+							<div class="custom-size wp-clearfix<# if ( data.model.size !== 'custom' ) { #> hidden<# } #>">
+								<span class="custom-size-setting">
+									<label for="image-details-size-width">Width</label>
+									<input type="number" id="image-details-size-width" aria-describedby="image-size-desc" data-setting="customWidth" step="1" value="{{ data.model.customWidth }}" />
+								</span>
+								<span class="sep" aria-hidden="true">&times;</span>
+								<span class="custom-size-setting">
+									<label for="image-details-size-height">Height</label>
+									<input type="number" id="image-details-size-height" aria-describedby="image-size-desc" data-setting="customHeight" step="1" value="{{ data.model.customHeight }}" />
+								</span>
+								<p id="image-size-desc" class="description">Image size in pixels</p>
+							</div>
+					<# } #>
+
+					<span class="setting link-to">
+						<label for="image-details-link-to" class="name">Link To</label>
+						<select id="image-details-link-to" data-setting="link">
+						<# if ( data.attachment ) { #>
+							<option value="file">
+								Media File							</option>
+							<option value="post">
+								Attachment Page							</option>
+						<# } else { #>
+							<option value="file">
+								Image URL							</option>
+						<# } #>
+							<option value="custom">
+								Custom URL							</option>
+							<option value="none">
+								None							</option>
+						</select>
+					</span>
+					<span class="setting">
+						<label for="image-details-link-to-custom" class="name">URL</label>
+						<input type="text" id="image-details-link-to-custom" class="link-to-custom" data-setting="linkUrl" />
+					</span>
+
+					<div class="advanced-section">
+						<h2><button type="button" class="button-link advanced-toggle">Advanced Options</button></h2>
+						<div class="advanced-settings hidden">
+							<div class="advanced-image">
+								<span class="setting title-text">
+									<label for="image-details-title-attribute" class="name">Image Title Attribute</label>
+									<input type="text" id="image-details-title-attribute" data-setting="title" value="{{ data.model.title }}" />
+								</span>
+								<span class="setting extra-classes">
+									<label for="image-details-css-class" class="name">Image CSS Class</label>
+									<input type="text" id="image-details-css-class" data-setting="extraClasses" value="{{ data.model.extraClasses }}" />
+								</span>
+							</div>
+							<div class="advanced-link">
+								<span class="setting link-target">
+									<input type="checkbox" id="image-details-link-target" data-setting="linkTargetBlank" value="_blank" <# if ( data.model.linkTargetBlank ) { #>checked="checked"<# } #>>
+									<label for="image-details-link-target" class="checkbox-label">Open link in a new tab</label>
+								</span>
+								<span class="setting link-rel">
+									<label for="image-details-link-rel" class="name">Link Rel</label>
+									<input type="text" id="image-details-link-rel" data-setting="linkRel" value="{{ data.model.linkRel }}" />
+								</span>
+								<span class="setting link-class-name">
+									<label for="image-details-link-css-class" class="name">Link CSS Class</label>
+									<input type="text" id="image-details-link-css-class" data-setting="linkClassName" value="{{ data.model.linkClassName }}" />
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-image">
+					<div class="image">
+						<img src="{{ data.model.url }}" draggable="false" alt="" />
+						<# if ( data.attachment && window.imageEdit ) { #>
+							<div class="actions">
+								<input type="button" class="edit-attachment button" value="Edit Original" />
+								<input type="button" class="replace-attachment button" value="Replace" />
+							</div>
+						<# } #>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+<script id="tmpl-image-editor" type="text/html">
+		<div id="media-head-{{ data.id }}"></div>
+		<div id="image-editor-{{ data.id }}"></div>
+	</script>
+<script id="tmpl-audio-details" type="text/html">
+		<# var ext, html5types = {
+			mp3: wp.media.view.settings.embedMimes.mp3,
+			ogg: wp.media.view.settings.embedMimes.ogg
+		}; #>
+
+				<div class="media-embed media-embed-details">
+			<div class="embed-media-settings embed-audio-settings">
+				<audio style="visibility: hidden"
+	controls
+	class="wp-audio-shortcode"
+	width="{{ _.isUndefined( data.model.width ) ? 400 : data.model.width }}"
+	preload="{{ _.isUndefined( data.model.preload ) ? 'none' : data.model.preload }}"
+	<#
+		if ( ! _.isUndefined( data.model.autoplay ) && data.model.autoplay ) {
+		#> autoplay<#
+	}
+		if ( ! _.isUndefined( data.model.loop ) && data.model.loop ) {
+		#> loop<#
+	}
+	#>
+>
+	<# if ( ! _.isEmpty( data.model.src ) ) { #>
+	<source src="{{ data.model.src }}" type="{{ wp.media.view.settings.embedMimes[ data.model.src.split('.').pop() ] }}" />
+	<# } #>
+
+		<# if ( ! _.isEmpty( data.model.mp3 ) ) { #>
+	<source src="{{ data.model.mp3 }}" type="{{ wp.media.view.settings.embedMimes[ 'mp3' ] }}" />
+	<# } #>
+			<# if ( ! _.isEmpty( data.model.ogg ) ) { #>
+	<source src="{{ data.model.ogg }}" type="{{ wp.media.view.settings.embedMimes[ 'ogg' ] }}" />
+	<# } #>
+			<# if ( ! _.isEmpty( data.model.flac ) ) { #>
+	<source src="{{ data.model.flac }}" type="{{ wp.media.view.settings.embedMimes[ 'flac' ] }}" />
+	<# } #>
+			<# if ( ! _.isEmpty( data.model.m4a ) ) { #>
+	<source src="{{ data.model.m4a }}" type="{{ wp.media.view.settings.embedMimes[ 'm4a' ] }}" />
+	<# } #>
+			<# if ( ! _.isEmpty( data.model.wav ) ) { #>
+	<source src="{{ data.model.wav }}" type="{{ wp.media.view.settings.embedMimes[ 'wav' ] }}" />
+	<# } #>
+		</audio>
+
+				<# if ( ! _.isEmpty( data.model.src ) ) {
+					ext = data.model.src.split('.').pop();
+					if ( html5types[ ext ] ) {
+						delete html5types[ ext ];
+					}
+				#>
+				<span class="setting">
+					<label for="audio-details-source" class="name">URL</label>
+					<input type="text" id="audio-details-source" readonly data-setting="src" value="{{ data.model.src }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</span>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.mp3 ) ) {
+					if ( ! _.isUndefined( html5types.mp3 ) ) {
+						delete html5types.mp3;
+					}
+				#>
+				<span class="setting">
+					<label for="audio-details-mp3-source" class="name">MP3</label>
+					<input type="text" id="audio-details-mp3-source" readonly data-setting="mp3" value="{{ data.model.mp3 }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</span>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.ogg ) ) {
+					if ( ! _.isUndefined( html5types.ogg ) ) {
+						delete html5types.ogg;
+					}
+				#>
+				<span class="setting">
+					<label for="audio-details-ogg-source" class="name">OGG</label>
+					<input type="text" id="audio-details-ogg-source" readonly data-setting="ogg" value="{{ data.model.ogg }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</span>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.flac ) ) {
+					if ( ! _.isUndefined( html5types.flac ) ) {
+						delete html5types.flac;
+					}
+				#>
+				<span class="setting">
+					<label for="audio-details-flac-source" class="name">FLAC</label>
+					<input type="text" id="audio-details-flac-source" readonly data-setting="flac" value="{{ data.model.flac }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</span>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.m4a ) ) {
+					if ( ! _.isUndefined( html5types.m4a ) ) {
+						delete html5types.m4a;
+					}
+				#>
+				<span class="setting">
+					<label for="audio-details-m4a-source" class="name">M4A</label>
+					<input type="text" id="audio-details-m4a-source" readonly data-setting="m4a" value="{{ data.model.m4a }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</span>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.wav ) ) {
+					if ( ! _.isUndefined( html5types.wav ) ) {
+						delete html5types.wav;
+					}
+				#>
+				<span class="setting">
+					<label for="audio-details-wav-source" class="name">WAV</label>
+					<input type="text" id="audio-details-wav-source" readonly data-setting="wav" value="{{ data.model.wav }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</span>
+				<# } #>
+
+				<# if ( ! _.isEmpty( html5types ) ) { #>
+				<fieldset class="setting-group">
+					<legend class="name">Add alternate sources for maximum HTML5 playback</legend>
+					<span class="setting">
+						<span class="button-large">
+						<# _.each( html5types, function (mime, type) { #>
+							<button class="button add-media-source" data-mime="{{ mime }}">{{ type }}</button>
+						<# } ) #>
+						</span>
+					</span>
+				</fieldset>
+				<# } #>
+
+				<fieldset class="setting-group">
+					<legend class="name">Preload</legend>
+					<span class="setting preload">
+						<span class="button-group button-large" data-setting="preload">
+							<button class="button" value="auto">Auto</button>
+							<button class="button" value="metadata">Metadata</button>
+							<button class="button active" value="none">None</button>
+						</span>
+					</span>
+				</fieldset>
+
+				<span class="setting-group">
+					<span class="setting checkbox-setting autoplay">
+						<input type="checkbox" id="audio-details-autoplay" data-setting="autoplay" />
+						<label for="audio-details-autoplay" class="checkbox-label">Autoplay</label>
+					</span>
+
+					<span class="setting checkbox-setting">
+						<input type="checkbox" id="audio-details-loop" data-setting="loop" />
+						<label for="audio-details-loop" class="checkbox-label">Loop</label>
+					</span>
+				</span>
+			</div>
+		</div>
+	</script>
+<script id="tmpl-video-details" type="text/html">
+		<# var ext, html5types = {
+			mp4: wp.media.view.settings.embedMimes.mp4,
+			ogv: wp.media.view.settings.embedMimes.ogv,
+			webm: wp.media.view.settings.embedMimes.webm
+		}; #>
+
+				<div class="media-embed media-embed-details">
+			<div class="embed-media-settings embed-video-settings">
+				<div class="wp-video-holder">
+				<#
+				var w = ! data.model.width || data.model.width > 640 ? 640 : data.model.width,
+					h = ! data.model.height ? 360 : data.model.height;
+
+				if ( data.model.width && w !== data.model.width ) {
+					h = Math.ceil( ( h * w ) / data.model.width );
+				}
+				#>
+
+				<#  var w_rule = '', classes = [],
+		w, h, settings = wp.media.view.settings,
+		isYouTube = isVimeo = false;
+
+	if ( ! _.isEmpty( data.model.src ) ) {
+		isYouTube = data.model.src.match(/youtube|youtu\.be/);
+		isVimeo = -1 !== data.model.src.indexOf('vimeo');
+	}
+
+	if ( settings.contentWidth && data.model.width >= settings.contentWidth ) {
+		w = settings.contentWidth;
+	} else {
+		w = data.model.width;
+	}
+
+	if ( w !== data.model.width ) {
+		h = Math.ceil( ( data.model.height * w ) / data.model.width );
+	} else {
+		h = data.model.height;
+	}
+
+	if ( w ) {
+		w_rule = 'width: ' + w + 'px; ';
+	}
+
+	if ( isYouTube ) {
+		classes.push( 'youtube-video' );
+	}
+
+	if ( isVimeo ) {
+		classes.push( 'vimeo-video' );
+	}
+
+#>
+<div style="{{ w_rule }}" class="wp-video">
+<video controls
+	class="wp-video-shortcode {{ classes.join( ' ' ) }}"
+	<# if ( w ) { #>width="{{ w }}"<# } #>
+	<# if ( h ) { #>height="{{ h }}"<# } #>
+			<#
+		if ( ! _.isUndefined( data.model.poster ) && data.model.poster ) {
+			#> poster="{{ data.model.poster }}"<#
+		} #>
+			preload			="{{ _.isUndefined( data.model.preload ) ? 'metadata' : data.model.preload }}"
+				<#
+		if ( ! _.isUndefined( data.model.autoplay ) && data.model.autoplay ) {
+		#> autoplay<#
+	}
+		if ( ! _.isUndefined( data.model.loop ) && data.model.loop ) {
+		#> loop<#
+	}
+	#>
+>
+	<# if ( ! _.isEmpty( data.model.src ) ) {
+		if ( isYouTube ) { #>
+		<source src="{{ data.model.src }}" type="video/youtube" />
+		<# } else if ( isVimeo ) { #>
+		<source src="{{ data.model.src }}" type="video/vimeo" />
+		<# } else { #>
+		<source src="{{ data.model.src }}" type="{{ settings.embedMimes[ data.model.src.split('.').pop() ] }}" />
+		<# }
+	} #>
+
+		<# if ( data.model.mp4 ) { #>
+	<source src="{{ data.model.mp4 }}" type="{{ settings.embedMimes[ 'mp4' ] }}" />
+	<# } #>
+		<# if ( data.model.m4v ) { #>
+	<source src="{{ data.model.m4v }}" type="{{ settings.embedMimes[ 'm4v' ] }}" />
+	<# } #>
+		<# if ( data.model.webm ) { #>
+	<source src="{{ data.model.webm }}" type="{{ settings.embedMimes[ 'webm' ] }}" />
+	<# } #>
+		<# if ( data.model.ogv ) { #>
+	<source src="{{ data.model.ogv }}" type="{{ settings.embedMimes[ 'ogv' ] }}" />
+	<# } #>
+		<# if ( data.model.flv ) { #>
+	<source src="{{ data.model.flv }}" type="{{ settings.embedMimes[ 'flv' ] }}" />
+	<# } #>
+		{{{ data.model.content }}}
+</video>
+</div>
+
+				<# if ( ! _.isEmpty( data.model.src ) ) {
+					ext = data.model.src.split('.').pop();
+					if ( html5types[ ext ] ) {
+						delete html5types[ ext ];
+					}
+				#>
+				<span class="setting">
+					<label for="video-details-source" class="name">URL</label>
+					<input type="text" id="video-details-source" readonly data-setting="src" value="{{ data.model.src }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</span>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.mp4 ) ) {
+					if ( ! _.isUndefined( html5types.mp4 ) ) {
+						delete html5types.mp4;
+					}
+				#>
+				<span class="setting">
+					<label for="video-details-mp4-source" class="name">MP4</label>
+					<input type="text" id="video-details-mp4-source" readonly data-setting="mp4" value="{{ data.model.mp4 }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</span>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.m4v ) ) {
+					if ( ! _.isUndefined( html5types.m4v ) ) {
+						delete html5types.m4v;
+					}
+				#>
+				<span class="setting">
+					<label for="video-details-m4v-source" class="name">M4V</label>
+					<input type="text" id="video-details-m4v-source" readonly data-setting="m4v" value="{{ data.model.m4v }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</span>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.webm ) ) {
+					if ( ! _.isUndefined( html5types.webm ) ) {
+						delete html5types.webm;
+					}
+				#>
+				<span class="setting">
+					<label for="video-details-webm-source" class="name">WEBM</label>
+					<input type="text" id="video-details-webm-source" readonly data-setting="webm" value="{{ data.model.webm }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</span>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.ogv ) ) {
+					if ( ! _.isUndefined( html5types.ogv ) ) {
+						delete html5types.ogv;
+					}
+				#>
+				<span class="setting">
+					<label for="video-details-ogv-source" class="name">OGV</label>
+					<input type="text" id="video-details-ogv-source" readonly data-setting="ogv" value="{{ data.model.ogv }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</span>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.flv ) ) {
+					if ( ! _.isUndefined( html5types.flv ) ) {
+						delete html5types.flv;
+					}
+				#>
+				<span class="setting">
+					<label for="video-details-flv-source" class="name">FLV</label>
+					<input type="text" id="video-details-flv-source" readonly data-setting="flv" value="{{ data.model.flv }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</span>
+				<# } #>
+								</div>
+
+				<# if ( ! _.isEmpty( html5types ) ) { #>
+				<fieldset class="setting-group">
+					<legend class="name">Add alternate sources for maximum HTML5 playback</legend>
+					<span class="setting">
+						<span class="button-large">
+						<# _.each( html5types, function (mime, type) { #>
+							<button class="button add-media-source" data-mime="{{ mime }}">{{ type }}</button>
+						<# } ) #>
+						</span>
+					</span>
+				</fieldset>
+				<# } #>
+
+				<# if ( ! _.isEmpty( data.model.poster ) ) { #>
+				<span class="setting">
+					<label for="video-details-poster-image" class="name">Poster Image</label>
+					<input type="text" id="video-details-poster-image" readonly data-setting="poster" value="{{ data.model.poster }}" />
+					<button type="button" class="button-link remove-setting">Remove poster image</button>
+				</span>
+				<# } #>
+
+				<fieldset class="setting-group">
+					<legend class="name">Preload</legend>
+					<span class="setting preload">
+						<span class="button-group button-large" data-setting="preload">
+							<button class="button" value="auto">Auto</button>
+							<button class="button" value="metadata">Metadata</button>
+							<button class="button active" value="none">None</button>
+						</span>
+					</span>
+				</fieldset>
+
+				<span class="setting-group">
+					<span class="setting checkbox-setting autoplay">
+						<input type="checkbox" id="video-details-autoplay" data-setting="autoplay" />
+						<label for="video-details-autoplay" class="checkbox-label">Autoplay</label>
+					</span>
+
+					<span class="setting checkbox-setting">
+						<input type="checkbox" id="video-details-loop" data-setting="loop" />
+						<label for="video-details-loop" class="checkbox-label">Loop</label>
+					</span>
+				</span>
+
+				<span class="setting" data-setting="content">
+					<#
+					var content = '';
+					if ( ! _.isEmpty( data.model.content ) ) {
+						var tracks = jQuery( data.model.content ).filter( 'track' );
+						_.each( tracks.toArray(), function( track, index ) {
+							content += track.outerHTML; #>
+						<label for="video-details-track-{{ index }}" class="name">Tracks (subtitles, captions, descriptions, chapters, or metadata)</label>
+						<input class="content-track" type="text" id="video-details-track-{{ index }}" aria-describedby="video-details-track-desc-{{ index }}" value="{{ track.outerHTML }}" />
+						<span class="description" id="video-details-track-desc-{{ index }}">
+						The srclang, label, and kind values can be edited to set the video track language and kind.						</span>
+						<button type="button" class="button-link remove-setting remove-track">Remove video track</button><br/>
+						<# } ); #>
+					<# } else { #>
+					<span class="name">Tracks (subtitles, captions, descriptions, chapters, or metadata)</span><br />
+					<em>There are no associated subtitles.</em>
+					<# } #>
+					<textarea class="hidden content-setting">{{ content }}</textarea>
+				</span>
+			</div>
+		</div>
+	</script>
+<script id="tmpl-editor-gallery" type="text/html">
+		<# if ( data.attachments.length ) { #>
+			<div class="gallery gallery-columns-{{ data.columns }}">
+				<# _.each( data.attachments, function( attachment, index ) { #>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<# if ( attachment.thumbnail ) { #>
+								<img src="{{ attachment.thumbnail.url }}" width="{{ attachment.thumbnail.width }}" height="{{ attachment.thumbnail.height }}" alt="{{ attachment.alt }}" />
+							<# } else { #>
+								<img src="{{ attachment.url }}" alt="{{ attachment.alt }}" />
+							<# } #>
+						</dt>
+						<# if ( attachment.caption ) { #>
+							<dd class="wp-caption-text gallery-caption">
+								{{{ data.verifyHTML( attachment.caption ) }}}
+							</dd>
+						<# } #>
+					</dl>
+					<# if ( index % data.columns === data.columns - 1 ) { #>
+						<br style="clear: both;">
+					<# } #>
+				<# } ); #>
+			</div>
+		<# } else { #>
+			<div class="wpview-error">
+				<div class="dashicons dashicons-format-gallery"></div><p>No items found.</p>
+			</div>
+		<# } #>
+	</script>
+<script id="tmpl-crop-content" type="text/html">
+		<img class="crop-image" src="{{ data.url }}" alt="Image crop area preview. Requires mouse interaction." />
+		<div class="upload-errors"></div>
+	</script>
+<script id="tmpl-site-icon-preview" type="text/html">
+		<h2>Preview</h2>
+		<strong aria-hidden="true">As a browser icon</strong>
+		<div class="favicon-preview">
+			<img src="https://curilic.com/wp-admin/images/browser.png" class="browser-preview" width="182" height="" alt="" />
+
+			<div class="favicon">
+				<img id="preview-favicon" src="{{ data.url }}" alt="Preview as a browser icon" />
+			</div>
+			<span class="browser-title" aria-hidden="true"><# print( 'Happy Shop' ) #></span>
+		</div>
+
+		<strong aria-hidden="true">As an app icon</strong>
+		<div class="app-icon-preview">
+			<img id="preview-app-icon" src="{{ data.url }}" alt="Preview as an app icon" />
+		</div>
+	</script>
+<!-- WooCommerce Tracks -->
+<script type="text/javascript">
+			window.wcTracks = window.wcTracks || {};
+			window.wcTracks.isEnabled = false;
+			window.wcTracks.recordEvent = function( name, properties ) {
+				if ( ! window.wcTracks.isEnabled ) {
+					return;
+				}
+
+				const eventName = 'wcadmin_' + name;
+				let eventProperties = properties || {};
+				eventProperties = { ...eventProperties, ...{"_via_ua":"python-requests\/2.28.1","_via_ip":"59.153.241.53","_lg":"","_dr":"","_dl":"http:\/\/curilic.com\/wp-admin\/admin.php?page=wc-admin&path=analyticsoverview&period=custom&compare=previous_year&after=2022-10-13&before=2022-10-16","url":"https:\/\/curilic.com","blog_lang":"en_US","blog_id":null,"products_count":"7","wc_version":"6.8.2"} };
+				if ( window.wp && window.wp.hooks && window.wp.hooks.applyFilters ) {
+					eventProperties = window.wp.hooks.applyFilters( 'woocommerce_tracks_client_event_properties', eventProperties, eventName );
+					delete( eventProperties._ui );
+					delete( eventProperties._ut );
+				}
+				window._tkq = window._tkq || [];
+				window._tkq.push( [ 'recordEvent', eventName, eventProperties ] );
+			}
+		</script>
+<script type="text/javascript">
+			window.wcTracks.enable = function( callback ) {
+				window.wcTracks.isEnabled = true;
+
+				var scriptUrl = 'https://stats.wp.com/w.js';
+				var existingScript = document.querySelector( `script[src="${ scriptUrl }"]` );
+				if ( existingScript ) {
+					return;
+				}
+
+				var script = document.createElement('script');
+				script.src = scriptUrl;
+				document.body.append(script);
+
+				// Callback after scripts have loaded.
+				script.onload = function() {
+					if ( 'function' === typeof callback ) {
+						callback( true );
+					}
+				}
+
+				// Callback triggered if the script fails to load.
+				script.onerror = function() {
+					if ( 'function' === typeof callback ) {
+						callback( false );
+					}
+				}
+			}
+		</script>
+<div class="hidden" id="wp-auth-check-wrap">
+<div id="wp-auth-check-bg"></div>
+<div id="wp-auth-check">
+<button class="wp-auth-check-close button-link" type="button"><span class="screen-reader-text">Close dialog</span></button>
+<div class="loading" data-src="https://curilic.com/wp-login.php?interim-login=1&amp;wp_lang=en_US" id="wp-auth-check-form"></div>
+<div class="wp-auth-fallback">
+<p><b class="wp-auth-fallback-expired" tabindex="0">Session expired</b></p>
+<p><a href="https://curilic.com/wp-login.php" target="_blank">Please log in again.</a>
+		The login page will open in a new tab. After logging in you can close it and return to this page.</p>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+            (function($) {
+                "use strict";
+
+                /* prepare data object */
+                var data_obj = {
+                    _wpnonce: 'a91a3c16de',
+                    action: 'wt_smart_coupon_process_user_review_action',
+                    wt_review_action_type: ''
+                };
+
+                $(document).on('click', '.wt_smart_coupon_review_request a.button', function(e) {
+                    e.preventDefault();
+                    var elm = $(this);
+                    var btn_type = elm.attr('data-type');
+                    if (btn_type == 'review') {
+                        window.open('https://wordpress.org/support/plugin/wt-smart-coupons-for-woocommerce/reviews/#new-post');
+                    }
+                    elm.parents('.wt_smart_coupon_review_request').hide();
+
+                    data_obj['wt_review_action_type'] = btn_type;
+                    $.ajax({
+                        url: 'https://curilic.com/wp-admin/admin-ajax.php',
+                        data: data_obj,
+                        type: 'POST'
+                    });
+
+                }).on('click', '.wt_smart_coupon_review_request .notice-dismiss', function(e) {
+                    e.preventDefault();
+                    data_obj['wt_review_action_type'] = 'closed';
+                    $.ajax({
+                        url: 'https://curilic.com/wp-admin/admin-ajax.php',
+                        data: data_obj,
+                        type: 'POST',
+                    });
+
+                });
+
+            })(jQuery)
+        </script>
+<script src="https://curilic.com/wp-admin/load-scripts.php?c=1&amp;load%5Bchunk_0%5D=hoverIntent,regenerator-runtime,wp-polyfill,wp-hooks&amp;ver=6.0.2" type="text/javascript"></script>
+<script id="wp-i18n-js" src="https://curilic.com/wp-includes/js/dist/i18n.min.js?ver=ebee46757c6a411e38fd079a7ac71d94"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="common-js" src="https://curilic.com/wp-admin/js/common.min.js?ver=6.0.2"></script>
+<script id="hoverintent-js-js" src="https://curilic.com/wp-includes/js/hoverintent-js.min.js?ver=2.2.1"></script>
+<script id="admin-bar-js" src="https://curilic.com/wp-includes/js/admin-bar.min.js?ver=6.0.2"></script>
+<script id="svg-painter-js" src="https://curilic.com/wp-admin/js/svg-painter.js?ver=6.0.2"></script>
+<script id="heartbeat-js-extra">
+var heartbeatSettings = {"nonce":"adaa4eee54"};
+</script>
+<script id="heartbeat-js" src="https://curilic.com/wp-includes/js/heartbeat.min.js?ver=6.0.2"></script>
+<script id="wp-auth-check-js" src="https://curilic.com/wp-includes/js/wp-auth-check.min.js?ver=6.0.2"></script>
+<script id="underscore-js" src="https://curilic.com/wp-includes/js/underscore.min.js?ver=1.13.3"></script>
+<script id="shortcode-js" src="https://curilic.com/wp-includes/js/shortcode.min.js?ver=6.0.2"></script>
+<script id="backbone-js" src="https://curilic.com/wp-includes/js/backbone.min.js?ver=1.4.1"></script>
+<script id="wp-util-js-extra">
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+</script>
+<script id="wp-util-js" src="https://curilic.com/wp-includes/js/wp-util.min.js?ver=6.0.2"></script>
+<script id="wp-backbone-js" src="https://curilic.com/wp-includes/js/wp-backbone.min.js?ver=6.0.2"></script>
+<script id="media-models-js-extra">
+var _wpMediaModelsL10n = {"settings":{"ajaxurl":"\/wp-admin\/admin-ajax.php","post":{"id":0}}};
+</script>
+<script id="media-models-js" src="https://curilic.com/wp-includes/js/media-models.min.js?ver=6.0.2"></script>
+<script id="wp-plupload-js-extra">
+var pluploadL10n = {"queue_limit_exceeded":"You have attempted to queue too many files.","file_exceeds_size_limit":"%s exceeds the maximum upload size for this site.","zero_byte_file":"This file is empty. Please try another.","invalid_filetype":"Sorry, you are not allowed to upload this file type.","not_an_image":"This file is not an image. Please try another.","image_memory_exceeded":"Memory exceeded. Please try another smaller file.","image_dimensions_exceeded":"This is larger than the maximum size. Please try another.","default_error":"An error occurred in the upload. Please try again later.","missing_upload_url":"There was a configuration error. Please contact the server administrator.","upload_limit_exceeded":"You may only upload 1 file.","http_error":"Unexpected response from the server. The file may have been uploaded successfully. Check in the Media Library or reload the page.","http_error_image":"The server cannot process the image. This can happen if the server is busy or does not have enough resources to complete the task. Uploading a smaller image may help. Suggested maximum size is 2560 pixels.","upload_failed":"Upload failed.","big_upload_failed":"Please try uploading this file with the %1$sbrowser uploader%2$s.","big_upload_queued":"%s exceeds the maximum upload size for the multi-file uploader when used in your browser.","io_error":"IO error.","security_error":"Security error.","file_cancelled":"File canceled.","upload_stopped":"Upload stopped.","dismiss":"Dismiss","crunching":"Crunching\u2026","deleted":"moved to the Trash.","error_uploading":"\u201c%s\u201d has failed to upload.","unsupported_image":"This image cannot be displayed in a web browser. For best results convert it to JPEG before uploading.","noneditable_image":"This image cannot be processed by the web server. Convert it to JPEG or PNG before uploading.","file_url_copied":"The file URL has been copied to your clipboard"};
+var _wpPluploadSettings = {"defaults":{"file_data_name":"async-upload","url":"\/wp-admin\/async-upload.php","filters":{"max_file_size":"1610612736b","mime_types":[{"extensions":"jpg,jpeg,jpe,gif,png,bmp,tiff,tif,webp,ico,heic,asf,asx,wmv,wmx,wm,avi,divx,flv,mov,qt,mpeg,mpg,mpe,mp4,m4v,ogv,webm,mkv,3gp,3gpp,3g2,3gp2,txt,asc,c,cc,h,srt,csv,tsv,ics,rtx,css,vtt,dfxp,mp3,m4a,m4b,aac,ra,ram,wav,ogg,oga,flac,mid,midi,wma,wax,mka,rtf,pdf,class,tar,zip,gz,gzip,rar,7z,psd,xcf,doc,pot,pps,ppt,wri,xla,xls,xlt,xlw,mdb,mpp,docx,docm,dotx,dotm,xlsx,xlsm,xlsb,xltx,xltm,xlam,pptx,pptm,ppsx,ppsm,potx,potm,ppam,sldx,sldm,onetoc,onetoc2,onetmp,onepkg,oxps,xps,odt,odp,ods,odg,odc,odb,odf,wp,wpd,key,numbers,pages"}]},"heic_upload_error":true,"multipart_params":{"action":"upload-attachment","_wpnonce":"40fe1e2173"}},"browser":{"mobile":false,"supported":true},"limitExceeded":false};
+</script>
+<script id="wp-plupload-js" src="https://curilic.com/wp-includes/js/plupload/wp-plupload.min.js?ver=6.0.2"></script>
+<script id="jquery-ui-core-js" src="https://curilic.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.1"></script>
+<script id="jquery-ui-mouse-js" src="https://curilic.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.1"></script>
+<script id="jquery-ui-sortable-js" src="https://curilic.com/wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.1"></script>
+<script id="mediaelement-core-js-before">
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script>
+<script id="mediaelement-core-js" src="https://curilic.com/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.16"></script>
+<script id="mediaelement-migrate-js" src="https://curilic.com/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=6.0.2"></script>
+<script id="mediaelement-js-extra">
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+</script>
+<script id="wp-mediaelement-js" src="https://curilic.com/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=6.0.2"></script>
+<script id="wp-api-request-js-extra">
+var wpApiSettings = {"root":"https:\/\/curilic.com\/wp-json\/","nonce":"ccfe210133","versionString":"wp\/v2\/"};
+</script>
+<script id="wp-api-request-js" src="https://curilic.com/wp-includes/js/api-request.min.js?ver=6.0.2"></script>
+<script id="wp-dom-ready-js" src="https://curilic.com/wp-includes/js/dist/dom-ready.min.js?ver=d996b53411d1533a84951212ab6ac4ff"></script>
+<script id="wp-a11y-js" src="https://curilic.com/wp-includes/js/dist/a11y.min.js?ver=a38319d7ba46c6e60f7f9d4c371222c5"></script>
+<script id="clipboard-js" src="https://curilic.com/wp-includes/js/clipboard.min.js?ver=2.0.10"></script>
+<script id="media-views-js-extra">
+var _wpMediaViewsL10n = {"mediaFrameDefaultTitle":"Media","url":"URL","addMedia":"Add media","search":"Search","select":"Select","cancel":"Cancel","update":"Update","replace":"Replace","remove":"Remove","back":"Back","selected":"%d selected","dragInfo":"Drag and drop to reorder media files.","uploadFilesTitle":"Upload files","uploadImagesTitle":"Upload images","mediaLibraryTitle":"Media Library","insertMediaTitle":"Add media","createNewGallery":"Create a new gallery","createNewPlaylist":"Create a new playlist","createNewVideoPlaylist":"Create a new video playlist","returnToLibrary":"\u2190 Go to library","allMediaItems":"All media items","allDates":"All dates","noItemsFound":"No items found.","insertIntoPost":"Insert into post","unattached":"Unattached","mine":"Mine","trash":"Trash","uploadedToThisPost":"Uploaded to this post","warnDelete":"You are about to permanently delete this item from your site.\nThis action cannot be undone.\n 'Cancel' to stop, 'OK' to delete.","warnBulkDelete":"You are about to permanently delete these items from your site.\nThis action cannot be undone.\n 'Cancel' to stop, 'OK' to delete.","warnBulkTrash":"You are about to trash these items.\n  'Cancel' to stop, 'OK' to delete.","bulkSelect":"Bulk select","trashSelected":"Move to Trash","restoreSelected":"Restore from Trash","deletePermanently":"Delete permanently","errorDeleting":"Error in deleting the attachment.","apply":"Apply","filterByDate":"Filter by date","filterByType":"Filter by type","searchLabel":"Search","searchMediaLabel":"Search media","searchMediaPlaceholder":"Search media items...","mediaFound":"Number of media items found: %d","noMedia":"No media items found.","noMediaTryNewSearch":"No media items found. Try a different search.","attachmentDetails":"Attachment details","insertFromUrlTitle":"Insert from URL","setFeaturedImageTitle":"Featured image","setFeaturedImage":"Set featured image","createGalleryTitle":"Create gallery","editGalleryTitle":"Edit gallery","cancelGalleryTitle":"\u2190 Cancel gallery","insertGallery":"Insert gallery","updateGallery":"Update gallery","addToGallery":"Add to gallery","addToGalleryTitle":"Add to gallery","reverseOrder":"Reverse order","imageDetailsTitle":"Image details","imageReplaceTitle":"Replace image","imageDetailsCancel":"Cancel edit","editImage":"Edit image","chooseImage":"Choose image","selectAndCrop":"Select and crop","skipCropping":"Skip cropping","cropImage":"Crop image","cropYourImage":"Crop your image","cropping":"Cropping\u2026","suggestedDimensions":"Suggested image dimensions: %1$s by %2$s pixels.","cropError":"There has been an error cropping your image.","audioDetailsTitle":"Audio details","audioReplaceTitle":"Replace audio","audioAddSourceTitle":"Add audio source","audioDetailsCancel":"Cancel edit","videoDetailsTitle":"Video details","videoReplaceTitle":"Replace video","videoAddSourceTitle":"Add video source","videoDetailsCancel":"Cancel edit","videoSelectPosterImageTitle":"Select poster image","videoAddTrackTitle":"Add subtitles","playlistDragInfo":"Drag and drop to reorder tracks.","createPlaylistTitle":"Create audio playlist","editPlaylistTitle":"Edit audio playlist","cancelPlaylistTitle":"\u2190 Cancel audio playlist","insertPlaylist":"Insert audio playlist","updatePlaylist":"Update audio playlist","addToPlaylist":"Add to audio playlist","addToPlaylistTitle":"Add to Audio Playlist","videoPlaylistDragInfo":"Drag and drop to reorder videos.","createVideoPlaylistTitle":"Create video playlist","editVideoPlaylistTitle":"Edit video playlist","cancelVideoPlaylistTitle":"\u2190 Cancel video playlist","insertVideoPlaylist":"Insert video playlist","updateVideoPlaylist":"Update video playlist","addToVideoPlaylist":"Add to video playlist","addToVideoPlaylistTitle":"Add to video Playlist","filterAttachments":"Filter media","attachmentsList":"Media list","settings":{"tabs":[],"tabUrl":"https:\/\/curilic.com\/wp-admin\/media-upload.php?chromeless=1","mimeTypes":{"image":"Images","audio":"Audio","video":"Video","application\/msword,application\/vnd.openxmlformats-officedocument.wordprocessingml.document,application\/vnd.ms-word.document.macroEnabled.12,application\/vnd.ms-word.template.macroEnabled.12,application\/vnd.oasis.opendocument.text,application\/vnd.apple.pages,application\/pdf,application\/vnd.ms-xpsdocument,application\/oxps,application\/rtf,application\/wordperfect,application\/octet-stream":"Documents","application\/vnd.apple.numbers,application\/vnd.oasis.opendocument.spreadsheet,application\/vnd.ms-excel,application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application\/vnd.ms-excel.sheet.macroEnabled.12,application\/vnd.ms-excel.sheet.binary.macroEnabled.12":"Spreadsheets","application\/x-gzip,application\/rar,application\/x-tar,application\/zip,application\/x-7z-compressed":"Archives"},"captions":true,"nonce":{"sendToEditor":"17194169c7"},"post":{"id":0},"defaultProps":{"link":"","align":"","size":""},"attachmentCounts":{"audio":1,"video":1},"oEmbedProxyUrl":"https:\/\/curilic.com\/wp-json\/oembed\/1.0\/proxy","embedExts":["mp3","ogg","flac","m4a","wav","mp4","m4v","webm","ogv","flv"],"embedMimes":{"mp3":"audio\/mpeg","ogg":"audio\/ogg","flac":"audio\/flac","m4a":"audio\/mpeg","wav":"audio\/wav","mp4":"video\/mp4","m4v":"video\/mp4","webm":"video\/webm","ogv":"video\/ogg","flv":"video\/x-flv"},"contentWidth":640,"months":[{"year":"2022","month":"10","text":"October 2022"},{"year":"2022","month":"9","text":"September 2022"},{"year":"2022","month":"8","text":"August 2022"}],"mediaTrash":0,"infiniteScrolling":0}};
+</script>
+<script id="media-views-js" src="https://curilic.com/wp-includes/js/media-views.min.js?ver=6.0.2"></script>
+<script id="media-editor-js" src="https://curilic.com/wp-includes/js/media-editor.min.js?ver=6.0.2"></script>
+<script id="media-audiovideo-js" src="https://curilic.com/wp-includes/js/media-audiovideo.min.js?ver=6.0.2"></script>
+<script id="mce-view-js-extra">
+var mceViewL10n = {"shortcodes":["wp_caption","caption","gallery","playlist","audio","video","embed","acf","vi_wot_form_track_order","wt-smart-coupon","wvs_show_archive_variation","woocommerce_orders_tracking_info_woo_email","vi_wot_track_order_timeline","vi_wot_tracking_more_form","product","product_page","product_category","product_categories","add_to_cart","add_to_cart_url","products","recent_products","sale_products","best_selling_products","top_rated_products","featured_products","product_attribute","related_products","shop_messages","woocommerce_order_tracking","woocommerce_cart","woocommerce_checkout","woocommerce_my_account","woocommerce_messages"]};
+</script>
+<script id="mce-view-js" src="https://curilic.com/wp-includes/js/mce-view.min.js?ver=6.0.2"></script>
+<script id="imgareaselect-js" src="https://curilic.com/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js?ver=6.0.2"></script>
+<script id="image-edit-js" src="https://curilic.com/wp-admin/js/image-edit.min.js?ver=6.0.2"></script>
+<script id="jquery-ui-draggable-js" src="https://curilic.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.1"></script>
+<script id="jquery-ui-slider-js" src="https://curilic.com/wp-includes/js/jquery/ui/slider.min.js?ver=1.13.1"></script>
+<script id="jquery-touch-punch-js" src="https://curilic.com/wp-includes/js/jquery/jquery.ui.touch-punch.js?ver=0.2.2"></script>
+<script id="iris-js" src="https://curilic.com/wp-admin/js/iris.min.js?ver=1.1.1"></script>
+<script id="wp-color-picker-js" src="https://curilic.com/wp-admin/js/color-picker.min.js?ver=6.0.2"></script>
+<script id="wp-color-picker-alpha-js" src="https://curilic.com/wp-content/plugins/woo-variation-swatches/assets/js/wp-color-picker-alpha.min.js?ver=1661346814"></script>
+<script id="gwp-form-field-dependency-js" src="https://curilic.com/wp-content/plugins/woo-variation-swatches/includes/getwooplugins/js/getwooplugins-form-field-dependency.js?ver=1661346814"></script>
+<script id="woo-variation-swatches-admin-js-extra">
+var woo_variation_swatches_admin = {"media_title":"Choose an Image","dialog_title":"Add Attribute","dialog_save":"Add","dialog_cancel":"Cancel","button_title":"Use Image","add_media":"Add Media","ajaxurl":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","nonce":"8daa01311b","reset_notice":"Are you sure you want to reset it to default setting?","nav_warning":"Please save changed first."};
+</script>
+<script id="woo-variation-swatches-admin-js" src="https://curilic.com/wp-content/plugins/woo-variation-swatches/assets/js/admin.min.js?ver=1661346814"></script>
+<script id="thickbox-js-extra">
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"https:\/\/curilic.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+</script>
+<script id="thickbox-js" src="https://curilic.com/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105"></script>
+<script id="lodash-js" src="https://curilic.com/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.19"></script>
+<script id="lodash-js-after">
+window.lodash = _.noConflict();
+</script>
+<script id="moment-js" src="https://curilic.com/wp-includes/js/dist/vendor/moment.min.js?ver=2.29.4"></script>
+<script id="moment-js-after">
+moment.updateLocale( 'en_US', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"F j, Y","LLL":"F j, Y g:i a","LLLL":null}} );
+</script>
+<script id="react-js" src="https://curilic.com/wp-includes/js/dist/vendor/react.min.js?ver=17.0.1"></script>
+<script id="react-dom-js" src="https://curilic.com/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1"></script>
+<script id="wp-url-js" src="https://curilic.com/wp-includes/js/dist/url.min.js?ver=16385e4d69da65c7283790971de6b297"></script>
+<script id="wp-api-fetch-js" src="https://curilic.com/wp-includes/js/dist/api-fetch.min.js?ver=63050163caffa6aac54e9ebf21fe0472"></script>
+<script id="wp-api-fetch-js-after">
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://curilic.com/wp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "ccfe210133" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://curilic.com/wp-admin/admin-ajax.php?action=rest-nonce";
+</script>
+<script id="wc-settings-js-before">
+				var wcSettings = wcSettings || JSON.parse( decodeURIComponent( '%7B%22adminUrl%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-admin%5C%2F%22%2C%22countries%22%3A%7B%22AF%22%3A%22Afghanistan%22%2C%22AX%22%3A%22%5Cu00c5land%20Islands%22%2C%22AL%22%3A%22Albania%22%2C%22DZ%22%3A%22Algeria%22%2C%22AS%22%3A%22American%20Samoa%22%2C%22AD%22%3A%22Andorra%22%2C%22AO%22%3A%22Angola%22%2C%22AI%22%3A%22Anguilla%22%2C%22AQ%22%3A%22Antarctica%22%2C%22AG%22%3A%22Antigua%20and%20Barbuda%22%2C%22AR%22%3A%22Argentina%22%2C%22AM%22%3A%22Armenia%22%2C%22AW%22%3A%22Aruba%22%2C%22AU%22%3A%22Australia%22%2C%22AT%22%3A%22Austria%22%2C%22AZ%22%3A%22Azerbaijan%22%2C%22BS%22%3A%22Bahamas%22%2C%22BH%22%3A%22Bahrain%22%2C%22BD%22%3A%22Bangladesh%22%2C%22BB%22%3A%22Barbados%22%2C%22BY%22%3A%22Belarus%22%2C%22PW%22%3A%22Belau%22%2C%22BE%22%3A%22Belgium%22%2C%22BZ%22%3A%22Belize%22%2C%22BJ%22%3A%22Benin%22%2C%22BM%22%3A%22Bermuda%22%2C%22BT%22%3A%22Bhutan%22%2C%22BO%22%3A%22Bolivia%22%2C%22BQ%22%3A%22Bonaire%2C%20Saint%20Eustatius%20and%20Saba%22%2C%22BA%22%3A%22Bosnia%20and%20Herzegovina%22%2C%22BW%22%3A%22Botswana%22%2C%22BV%22%3A%22Bouvet%20Island%22%2C%22BR%22%3A%22Brazil%22%2C%22IO%22%3A%22British%20Indian%20Ocean%20Territory%22%2C%22BN%22%3A%22Brunei%22%2C%22BG%22%3A%22Bulgaria%22%2C%22BF%22%3A%22Burkina%20Faso%22%2C%22BI%22%3A%22Burundi%22%2C%22KH%22%3A%22Cambodia%22%2C%22CM%22%3A%22Cameroon%22%2C%22CA%22%3A%22Canada%22%2C%22CV%22%3A%22Cape%20Verde%22%2C%22KY%22%3A%22Cayman%20Islands%22%2C%22CF%22%3A%22Central%20African%20Republic%22%2C%22TD%22%3A%22Chad%22%2C%22CL%22%3A%22Chile%22%2C%22CN%22%3A%22China%22%2C%22CX%22%3A%22Christmas%20Island%22%2C%22CC%22%3A%22Cocos%20%28Keeling%29%20Islands%22%2C%22CO%22%3A%22Colombia%22%2C%22KM%22%3A%22Comoros%22%2C%22CG%22%3A%22Congo%20%28Brazzaville%29%22%2C%22CD%22%3A%22Congo%20%28Kinshasa%29%22%2C%22CK%22%3A%22Cook%20Islands%22%2C%22CR%22%3A%22Costa%20Rica%22%2C%22HR%22%3A%22Croatia%22%2C%22CU%22%3A%22Cuba%22%2C%22CW%22%3A%22Cura%26ccedil%3Bao%22%2C%22CY%22%3A%22Cyprus%22%2C%22CZ%22%3A%22Czech%20Republic%22%2C%22DK%22%3A%22Denmark%22%2C%22DJ%22%3A%22Djibouti%22%2C%22DM%22%3A%22Dominica%22%2C%22DO%22%3A%22Dominican%20Republic%22%2C%22EC%22%3A%22Ecuador%22%2C%22EG%22%3A%22Egypt%22%2C%22SV%22%3A%22El%20Salvador%22%2C%22GQ%22%3A%22Equatorial%20Guinea%22%2C%22ER%22%3A%22Eritrea%22%2C%22EE%22%3A%22Estonia%22%2C%22SZ%22%3A%22Eswatini%22%2C%22ET%22%3A%22Ethiopia%22%2C%22FK%22%3A%22Falkland%20Islands%22%2C%22FO%22%3A%22Faroe%20Islands%22%2C%22FJ%22%3A%22Fiji%22%2C%22FI%22%3A%22Finland%22%2C%22FR%22%3A%22France%22%2C%22GF%22%3A%22French%20Guiana%22%2C%22PF%22%3A%22French%20Polynesia%22%2C%22TF%22%3A%22French%20Southern%20Territories%22%2C%22GA%22%3A%22Gabon%22%2C%22GM%22%3A%22Gambia%22%2C%22GE%22%3A%22Georgia%22%2C%22DE%22%3A%22Germany%22%2C%22GH%22%3A%22Ghana%22%2C%22GI%22%3A%22Gibraltar%22%2C%22GR%22%3A%22Greece%22%2C%22GL%22%3A%22Greenland%22%2C%22GD%22%3A%22Grenada%22%2C%22GP%22%3A%22Guadeloupe%22%2C%22GU%22%3A%22Guam%22%2C%22GT%22%3A%22Guatemala%22%2C%22GG%22%3A%22Guernsey%22%2C%22GN%22%3A%22Guinea%22%2C%22GW%22%3A%22Guinea-Bissau%22%2C%22GY%22%3A%22Guyana%22%2C%22HT%22%3A%22Haiti%22%2C%22HM%22%3A%22Heard%20Island%20and%20McDonald%20Islands%22%2C%22HN%22%3A%22Honduras%22%2C%22HK%22%3A%22Hong%20Kong%22%2C%22HU%22%3A%22Hungary%22%2C%22IS%22%3A%22Iceland%22%2C%22IN%22%3A%22India%22%2C%22ID%22%3A%22Indonesia%22%2C%22IR%22%3A%22Iran%22%2C%22IQ%22%3A%22Iraq%22%2C%22IE%22%3A%22Ireland%22%2C%22IM%22%3A%22Isle%20of%20Man%22%2C%22IL%22%3A%22Israel%22%2C%22IT%22%3A%22Italy%22%2C%22CI%22%3A%22Ivory%20Coast%22%2C%22JM%22%3A%22Jamaica%22%2C%22JP%22%3A%22Japan%22%2C%22JE%22%3A%22Jersey%22%2C%22JO%22%3A%22Jordan%22%2C%22KZ%22%3A%22Kazakhstan%22%2C%22KE%22%3A%22Kenya%22%2C%22KI%22%3A%22Kiribati%22%2C%22KW%22%3A%22Kuwait%22%2C%22KG%22%3A%22Kyrgyzstan%22%2C%22LA%22%3A%22Laos%22%2C%22LV%22%3A%22Latvia%22%2C%22LB%22%3A%22Lebanon%22%2C%22LS%22%3A%22Lesotho%22%2C%22LR%22%3A%22Liberia%22%2C%22LY%22%3A%22Libya%22%2C%22LI%22%3A%22Liechtenstein%22%2C%22LT%22%3A%22Lithuania%22%2C%22LU%22%3A%22Luxembourg%22%2C%22MO%22%3A%22Macao%22%2C%22MG%22%3A%22Madagascar%22%2C%22MW%22%3A%22Malawi%22%2C%22MY%22%3A%22Malaysia%22%2C%22MV%22%3A%22Maldives%22%2C%22ML%22%3A%22Mali%22%2C%22MT%22%3A%22Malta%22%2C%22MH%22%3A%22Marshall%20Islands%22%2C%22MQ%22%3A%22Martinique%22%2C%22MR%22%3A%22Mauritania%22%2C%22MU%22%3A%22Mauritius%22%2C%22YT%22%3A%22Mayotte%22%2C%22MX%22%3A%22Mexico%22%2C%22FM%22%3A%22Micronesia%22%2C%22MD%22%3A%22Moldova%22%2C%22MC%22%3A%22Monaco%22%2C%22MN%22%3A%22Mongolia%22%2C%22ME%22%3A%22Montenegro%22%2C%22MS%22%3A%22Montserrat%22%2C%22MA%22%3A%22Morocco%22%2C%22MZ%22%3A%22Mozambique%22%2C%22MM%22%3A%22Myanmar%22%2C%22NA%22%3A%22Namibia%22%2C%22NR%22%3A%22Nauru%22%2C%22NP%22%3A%22Nepal%22%2C%22NL%22%3A%22Netherlands%22%2C%22NC%22%3A%22New%20Caledonia%22%2C%22NZ%22%3A%22New%20Zealand%22%2C%22NI%22%3A%22Nicaragua%22%2C%22NE%22%3A%22Niger%22%2C%22NG%22%3A%22Nigeria%22%2C%22NU%22%3A%22Niue%22%2C%22NF%22%3A%22Norfolk%20Island%22%2C%22KP%22%3A%22North%20Korea%22%2C%22MK%22%3A%22North%20Macedonia%22%2C%22MP%22%3A%22Northern%20Mariana%20Islands%22%2C%22NO%22%3A%22Norway%22%2C%22OM%22%3A%22Oman%22%2C%22PK%22%3A%22Pakistan%22%2C%22PS%22%3A%22Palestinian%20Territory%22%2C%22PA%22%3A%22Panama%22%2C%22PG%22%3A%22Papua%20New%20Guinea%22%2C%22PY%22%3A%22Paraguay%22%2C%22PE%22%3A%22Peru%22%2C%22PH%22%3A%22Philippines%22%2C%22PN%22%3A%22Pitcairn%22%2C%22PL%22%3A%22Poland%22%2C%22PT%22%3A%22Portugal%22%2C%22PR%22%3A%22Puerto%20Rico%22%2C%22QA%22%3A%22Qatar%22%2C%22RE%22%3A%22Reunion%22%2C%22RO%22%3A%22Romania%22%2C%22RU%22%3A%22Russia%22%2C%22RW%22%3A%22Rwanda%22%2C%22ST%22%3A%22S%26atilde%3Bo%20Tom%26eacute%3B%20and%20Pr%26iacute%3Bncipe%22%2C%22BL%22%3A%22Saint%20Barth%26eacute%3Blemy%22%2C%22SH%22%3A%22Saint%20Helena%22%2C%22KN%22%3A%22Saint%20Kitts%20and%20Nevis%22%2C%22LC%22%3A%22Saint%20Lucia%22%2C%22SX%22%3A%22Saint%20Martin%20%28Dutch%20part%29%22%2C%22MF%22%3A%22Saint%20Martin%20%28French%20part%29%22%2C%22PM%22%3A%22Saint%20Pierre%20and%20Miquelon%22%2C%22VC%22%3A%22Saint%20Vincent%20and%20the%20Grenadines%22%2C%22WS%22%3A%22Samoa%22%2C%22SM%22%3A%22San%20Marino%22%2C%22SA%22%3A%22Saudi%20Arabia%22%2C%22SN%22%3A%22Senegal%22%2C%22RS%22%3A%22Serbia%22%2C%22SC%22%3A%22Seychelles%22%2C%22SL%22%3A%22Sierra%20Leone%22%2C%22SG%22%3A%22Singapore%22%2C%22SK%22%3A%22Slovakia%22%2C%22SI%22%3A%22Slovenia%22%2C%22SB%22%3A%22Solomon%20Islands%22%2C%22SO%22%3A%22Somalia%22%2C%22ZA%22%3A%22South%20Africa%22%2C%22GS%22%3A%22South%20Georgia%5C%2FSandwich%20Islands%22%2C%22KR%22%3A%22South%20Korea%22%2C%22SS%22%3A%22South%20Sudan%22%2C%22ES%22%3A%22Spain%22%2C%22LK%22%3A%22Sri%20Lanka%22%2C%22SD%22%3A%22Sudan%22%2C%22SR%22%3A%22Suriname%22%2C%22SJ%22%3A%22Svalbard%20and%20Jan%20Mayen%22%2C%22SE%22%3A%22Sweden%22%2C%22CH%22%3A%22Switzerland%22%2C%22SY%22%3A%22Syria%22%2C%22TW%22%3A%22Taiwan%22%2C%22TJ%22%3A%22Tajikistan%22%2C%22TZ%22%3A%22Tanzania%22%2C%22TH%22%3A%22Thailand%22%2C%22TL%22%3A%22Timor-Leste%22%2C%22TG%22%3A%22Togo%22%2C%22TK%22%3A%22Tokelau%22%2C%22TO%22%3A%22Tonga%22%2C%22TT%22%3A%22Trinidad%20and%20Tobago%22%2C%22TN%22%3A%22Tunisia%22%2C%22TR%22%3A%22Turkey%22%2C%22TM%22%3A%22Turkmenistan%22%2C%22TC%22%3A%22Turks%20and%20Caicos%20Islands%22%2C%22TV%22%3A%22Tuvalu%22%2C%22UG%22%3A%22Uganda%22%2C%22UA%22%3A%22Ukraine%22%2C%22AE%22%3A%22United%20Arab%20Emirates%22%2C%22GB%22%3A%22United%20Kingdom%20%28UK%29%22%2C%22US%22%3A%22United%20States%20%28US%29%22%2C%22UM%22%3A%22United%20States%20%28US%29%20Minor%20Outlying%20Islands%22%2C%22UY%22%3A%22Uruguay%22%2C%22UZ%22%3A%22Uzbekistan%22%2C%22VU%22%3A%22Vanuatu%22%2C%22VA%22%3A%22Vatican%22%2C%22VE%22%3A%22Venezuela%22%2C%22VN%22%3A%22Vietnam%22%2C%22VG%22%3A%22Virgin%20Islands%20%28British%29%22%2C%22VI%22%3A%22Virgin%20Islands%20%28US%29%22%2C%22WF%22%3A%22Wallis%20and%20Futuna%22%2C%22EH%22%3A%22Western%20Sahara%22%2C%22YE%22%3A%22Yemen%22%2C%22ZM%22%3A%22Zambia%22%2C%22ZW%22%3A%22Zimbabwe%22%7D%2C%22currency%22%3A%7B%22code%22%3A%22USD%22%2C%22precision%22%3A2%2C%22symbol%22%3A%22%24%22%2C%22symbolPosition%22%3A%22left%22%2C%22decimalSeparator%22%3A%22.%22%2C%22thousandSeparator%22%3A%22%2C%22%2C%22priceFormat%22%3A%22%251%24s%252%24s%22%7D%2C%22currentUserIsAdmin%22%3Afalse%2C%22homeUrl%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2F%22%2C%22locale%22%3A%7B%22siteLocale%22%3A%22en_US%22%2C%22userLocale%22%3A%22en_US%22%2C%22weekdaysShort%22%3A%5B%22Sun%22%2C%22Mon%22%2C%22Tue%22%2C%22Wed%22%2C%22Thu%22%2C%22Fri%22%2C%22Sat%22%5D%7D%2C%22orderStatuses%22%3A%7B%22pending%22%3A%22Pending%20payment%22%2C%22processing%22%3A%22Processing%22%2C%22on-hold%22%3A%22On%20hold%22%2C%22completed%22%3A%22Completed%22%2C%22cancelled%22%3A%22Cancelled%22%2C%22refunded%22%3A%22Refunded%22%2C%22failed%22%3A%22Failed%22%2C%22partial-payment%22%3A%22Partially%20Paid%22%2C%22checkout-draft%22%3A%22Draft%22%7D%2C%22placeholderImgSrc%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-content%5C%2Fuploads%5C%2Fwoocommerce-placeholder.png%22%2C%22productsSettings%22%3A%7B%22cartRedirectAfterAdd%22%3Afalse%7D%2C%22siteTitle%22%3A%22Happy%20Shop%22%2C%22storePages%22%3A%7B%22myaccount%22%3A%7B%22id%22%3A8%2C%22title%22%3A%22My%20account%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fmy-account%5C%2F%22%7D%2C%22shop%22%3A%7B%22id%22%3A5%2C%22title%22%3A%22Shop%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fcollections%5C%2F%22%7D%2C%22cart%22%3A%7B%22id%22%3A6%2C%22title%22%3A%22Cart%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fcart%5C%2F%22%7D%2C%22checkout%22%3A%7B%22id%22%3A7%2C%22title%22%3A%22Checkout%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fcheckout%5C%2F%22%7D%2C%22privacy%22%3A%7B%22id%22%3A0%2C%22title%22%3A%22%22%2C%22permalink%22%3Afalse%7D%2C%22terms%22%3A%7B%22id%22%3A29%2C%22title%22%3A%22Terms%20of%20Service%5Cufffc%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fterms-of-service%25ef%25bf%25bc%5C%2F%22%7D%7D%2C%22wcAssetUrl%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-content%5C%2Fplugins%5C%2Fwoocommerce%5C%2Fassets%5C%2F%22%2C%22wcVersion%22%3A%226.8.2%22%2C%22wpLoginUrl%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-login.php%22%2C%22wpVersion%22%3A%226.0.2%22%2C%22admin%22%3A%7B%22orderStatuses%22%3A%7B%22pending%22%3A%22Pending%20payment%22%2C%22processing%22%3A%22Processing%22%2C%22on-hold%22%3A%22On%20hold%22%2C%22completed%22%3A%22Completed%22%2C%22cancelled%22%3A%22Cancelled%22%2C%22refunded%22%3A%22Refunded%22%2C%22failed%22%3A%22Failed%22%2C%22partial-payment%22%3A%22Partially%20Paid%22%2C%22checkout-draft%22%3A%22Draft%22%7D%2C%22stockStatuses%22%3A%7B%22instock%22%3A%22In%20stock%22%2C%22outofstock%22%3A%22Out%20of%20stock%22%2C%22onbackorder%22%3A%22On%20backorder%22%7D%2C%22currency%22%3A%7B%22code%22%3A%22USD%22%2C%22precision%22%3A2%2C%22symbol%22%3A%22%24%22%2C%22symbolPosition%22%3A%22left%22%2C%22decimalSeparator%22%3A%22.%22%2C%22thousandSeparator%22%3A%22%2C%22%2C%22priceFormat%22%3A%22%251%24s%252%24s%22%7D%2C%22locale%22%3A%7B%22siteLocale%22%3A%22en_US%22%2C%22userLocale%22%3A%22en_US%22%2C%22weekdaysShort%22%3A%5B%22Sun%22%2C%22Mon%22%2C%22Tue%22%2C%22Wed%22%2C%22Thu%22%2C%22Fri%22%2C%22Sat%22%5D%7D%2C%22preloadOptions%22%3A%7B%22woocommerce_default_homepage_layout%22%3Afalse%2C%22woocommerce_admin_install_timestamp%22%3A%221661340756%22%2C%22woocommerce_marketing_overview_welcome_hidden%22%3A%22yes%22%2C%22woocommerce_admin_transient_notices_queue%22%3Afalse%7D%2C%22preloadSettings%22%3A%7B%22general%22%3A%7B%22store_address%22%3A%22%22%2C%22woocommerce_store_address%22%3A%22%22%2C%22woocommerce_store_address_2%22%3A%22%22%2C%22woocommerce_store_city%22%3A%22%22%2C%22woocommerce_default_country%22%3A%22US%3AAL%22%2C%22woocommerce_store_postcode%22%3A%22%22%2C%22general_options%22%3A%22%22%2C%22woocommerce_allowed_countries%22%3A%22specific%22%2C%22woocommerce_all_except_countries%22%3A%5B%5D%2C%22woocommerce_specific_allowed_countries%22%3A%5B%22US%22%5D%2C%22woocommerce_ship_to_countries%22%3A%22%22%2C%22woocommerce_specific_ship_to_countries%22%3A%5B%5D%2C%22woocommerce_default_customer_address%22%3A%22base%22%2C%22woocommerce_calc_taxes%22%3A%22no%22%2C%22woocommerce_enable_coupons%22%3A%22yes%22%2C%22woocommerce_calc_discounts_sequentially%22%3A%22no%22%2C%22order_number_options%22%3A%22%22%2C%22woocommerce_order_number_start%22%3A%22888%22%2C%22woocommerce_order_number_prefix%22%3A%22curilic.com-%22%2C%22woocommerce_order_number_suffix%22%3A%22%22%2C%22woocommerce_order_number_skip_free_orders%22%3A%22no%22%2C%22woocommerce_free_order_number_prefix%22%3A%22FREE-%22%2C%22pricing_options%22%3A%22%22%2C%22woocommerce_currency%22%3A%22USD%22%2C%22woocommerce_currency_pos%22%3A%22left%22%2C%22woocommerce_price_thousand_sep%22%3A%22%2C%22%2C%22woocommerce_price_decimal_sep%22%3A%22.%22%2C%22woocommerce_price_num_decimals%22%3A%222%22%7D%7D%2C%22currentUserData%22%3A%7B%22id%22%3A8%2C%22username%22%3A%22namvenus%22%2C%22name%22%3A%22Sell%20Nam%20Venus%22%2C%22first_name%22%3A%22Sell%22%2C%22last_name%22%3A%22Nam%20Venus%22%2C%22email%22%3A%22namvenus%40asiup.com%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fauthor%5C%2Fnamvenus%5C%2F%22%2C%22locale%22%3A%22en_US%22%2C%22nickname%22%3A%22namvenus%22%2C%22slug%22%3A%22namvenus%22%2C%22roles%22%3A%5B%22seller%22%5D%2C%22registered_date%22%3A%222022-09-27T09%3A16%3A12%2B00%3A00%22%2C%22capabilities%22%3A%7B%22assign_product_terms%22%3Atrue%2C%22delete_others_products%22%3Atrue%2C%22delete_private_products%22%3Atrue%2C%22delete_product%22%3Atrue%2C%22delete_product_terms%22%3Atrue%2C%22delete_products%22%3Atrue%2C%22delete_published_products%22%3Atrue%2C%22edit_others_products%22%3Atrue%2C%22edit_private_products%22%3Atrue%2C%22edit_product%22%3Atrue%2C%22edit_product_terms%22%3Atrue%2C%22edit_products%22%3Atrue%2C%22edit_published_products%22%3Atrue%2C%22export%22%3Atrue%2C%22import%22%3Atrue%2C%22level_0%22%3Atrue%2C%22manage_product_terms%22%3Atrue%2C%22publish_products%22%3Atrue%2C%22read%22%3Atrue%2C%22read_private_products%22%3Atrue%2C%22read_product%22%3Atrue%2C%22unfiltered_upload%22%3Atrue%2C%22upload_files%22%3Atrue%2C%22view_admin_dashboard%22%3Atrue%2C%22view_woocommerce_reports%22%3Atrue%2C%22seller%22%3Atrue%7D%2C%22extra_capabilities%22%3A%7B%22seller%22%3Atrue%7D%2C%22avatar_urls%22%3A%7B%2224%22%3A%22https%3A%5C%2F%5C%2Fsecure.gravatar.com%5C%2Favatar%5C%2Fa646e306e49d8af9d9a06f7671e5ce1c%3Fs%3D24%26d%3Dmm%26r%3Dg%22%2C%2248%22%3A%22https%3A%5C%2F%5C%2Fsecure.gravatar.com%5C%2Favatar%5C%2Fa646e306e49d8af9d9a06f7671e5ce1c%3Fs%3D48%26d%3Dmm%26r%3Dg%22%2C%2296%22%3A%22https%3A%5C%2F%5C%2Fsecure.gravatar.com%5C%2Favatar%5C%2Fa646e306e49d8af9d9a06f7671e5ce1c%3Fs%3D96%26d%3Dmm%26r%3Dg%22%7D%2C%22meta%22%3A%5B%5D%2C%22is_super_admin%22%3Afalse%2C%22woocommerce_meta%22%3A%7B%22activity_panel_inbox_last_read%22%3A%22%22%2C%22activity_panel_reviews_last_read%22%3A%22%22%2C%22categories_report_columns%22%3A%22%22%2C%22coupons_report_columns%22%3A%22%22%2C%22customers_report_columns%22%3A%22%22%2C%22orders_report_columns%22%3A%22%5B%5D%22%2C%22products_report_columns%22%3A%22%22%2C%22revenue_report_columns%22%3A%22%22%2C%22taxes_report_columns%22%3A%22%22%2C%22variations_report_columns%22%3A%22%5B%5D%22%2C%22dashboard_sections%22%3A%22%5B%7B%5C%22key%5C%22%3A%5C%22store-performance%5C%22%2C%5C%22title%5C%22%3A%5C%22Performance%5C%22%2C%5C%22isVisible%5C%22%3Atrue%2C%5C%22hiddenBlocks%5C%22%3A%5B%5C%22coupons%5C%2Forders_count%5C%22%2C%5C%22downloads%5C%2Fdownload_count%5C%22%2C%5C%22taxes%5C%2Forder_tax%5C%22%2C%5C%22taxes%5C%2Ftotal_tax%5C%22%2C%5C%22taxes%5C%2Fshipping_tax%5C%22%2C%5C%22revenue%5C%2Fshipping%5C%22%2C%5C%22revenue%5C%2Fgross_sales%5C%22%2C%5C%22revenue%5C%2Frefunds%5C%22%2C%5C%22coupons%5C%2Famount%5C%22%5D%7D%2C%7B%5C%22key%5C%22%3A%5C%22charts%5C%22%2C%5C%22title%5C%22%3A%5C%22Charts%5C%22%2C%5C%22isVisible%5C%22%3Atrue%2C%5C%22hiddenBlocks%5C%22%3A%5B%5C%22orders_avg_order_value%5C%22%2C%5C%22avg_items_per_order%5C%22%2C%5C%22products_items_sold%5C%22%2C%5C%22revenue_total_sales%5C%22%2C%5C%22revenue_refunds%5C%22%2C%5C%22coupons_amount%5C%22%2C%5C%22coupons_orders_count%5C%22%2C%5C%22revenue_shipping%5C%22%2C%5C%22taxes_total_tax%5C%22%2C%5C%22taxes_order_tax%5C%22%2C%5C%22taxes_shipping_tax%5C%22%2C%5C%22downloads_download_count%5C%22%5D%7D%2C%7B%5C%22key%5C%22%3A%5C%22leaderboards%5C%22%2C%5C%22title%5C%22%3A%5C%22Leaderboards%5C%22%2C%5C%22isVisible%5C%22%3Atrue%2C%5C%22hiddenBlocks%5C%22%3A%5B%5C%22coupons%5C%22%2C%5C%22customers%5C%22%5D%7D%5D%22%2C%22dashboard_chart_type%22%3A%22%5C%22line%5C%22%22%2C%22dashboard_chart_interval%22%3A%22%5C%22hour%5C%22%22%2C%22dashboard_leaderboard_rows%22%3A%22%22%2C%22homepage_layout%22%3A%22%22%2C%22homepage_stats%22%3A%22%22%2C%22task_list_tracked_started_tasks%22%3A%22%22%2C%22help_panel_highlight_shown%22%3A%22%22%2C%22android_app_banner_dismissed%22%3A%22%22%7D%7D%2C%22reviewsEnabled%22%3A%22yes%22%2C%22manageStock%22%3A%22yes%22%2C%22commentModeration%22%3A%220%22%2C%22notifyLowStockAmount%22%3A%222%22%2C%22wcAdminAssetUrl%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-content%5C%2Fplugins%5C%2Fwoocommerce%5C%2Fassets%5C%2Fimages%22%2C%22wcVersion%22%3A%226.8.2%22%2C%22siteUrl%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%22%2C%22shopUrl%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fcollections%5C%2F%22%2C%22homeUrl%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%22%2C%22dateFormat%22%3A%22F%20j%2C%20Y%22%2C%22timeZone%22%3A%22America%5C%2FNew_York%22%2C%22plugins%22%3A%7B%22installedPlugins%22%3A%5B%22advanced-custom-fields-pro%22%2C%22akismet%22%2C%22all-in-one-wp-migration%22%2C%22all-in-one-wp-migration-url-extension%22%2C%22vudon-notify%22%2C%22asiup-pixel%22%2C%22breeze%22%2C%22cdn-enabler%22%2C%22wp-dobby%22%2C%22duplicator-pro%22%2C%22paypal-for-woocommerce%22%2C%22pixelyoursite-pro%22%2C%22pixelyoursite-super-pack%22%2C%22query-monitor%22%2C%22redis-cache%22%2C%22wt-smart-coupons-for-woocommerce%22%2C%22user-role-editor%22%2C%22woo-variation-swatches%22%2C%22woocommerce%22%2C%22woocommerce-orders-tracking%22%2C%22woocommerce-sequential-order-numbers-pro%22%5D%2C%22activePlugins%22%3A%5B%22query-monitor%22%2C%22advanced-custom-fields-pro%22%2C%22asiup-pixel%22%2C%22paypal-for-woocommerce%22%2C%22pixelyoursite-pro%22%2C%22pixelyoursite-super-pack%22%2C%22redis-cache%22%2C%22redis-cache%22%2C%22user-role-editor%22%2C%22vudon-notify%22%2C%22woo-variation-swatches%22%2C%22woocommerce-orders-tracking%22%2C%22woocommerce-sequential-order-numbers-pro%22%2C%22woocommerce%22%2C%22wp-dobby%22%2C%22wt-smart-coupons-for-woocommerce%22%5D%7D%2C%22woocommerceTranslation%22%3A%22WooCommerce%22%2C%22unregisteredOrderStatuses%22%3A%5B%5D%2C%22variationTitleAttributesSeparator%22%3A%22%20-%20%22%2C%22dataEndpoints%22%3A%7B%22performanceIndicators%22%3A%5B%7B%22stat%22%3A%22revenue%5C%2Ftotal_sales%22%2C%22chart%22%3A%22total_sales%22%2C%22label%22%3A%22Total%20sales%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Frevenue%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Frevenue%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22revenue%5C%2Fnet_revenue%22%2C%22chart%22%3A%22net_revenue%22%2C%22label%22%3A%22Net%20sales%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Frevenue%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Frevenue%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22orders%5C%2Forders_count%22%2C%22chart%22%3A%22orders_count%22%2C%22label%22%3A%22Orders%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Forders%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Forders%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22orders%5C%2Favg_order_value%22%2C%22chart%22%3A%22avg_order_value%22%2C%22label%22%3A%22Average%20order%20value%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Forders%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Forders%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22products%5C%2Fitems_sold%22%2C%22chart%22%3A%22items_sold%22%2C%22label%22%3A%22Products%20sold%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Fproducts%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Fproducts%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22revenue%5C%2Frefunds%22%2C%22chart%22%3A%22refunds%22%2C%22label%22%3A%22Returns%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Frevenue%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Frevenue%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22coupons%5C%2Forders_count%22%2C%22chart%22%3A%22orders_count%22%2C%22label%22%3A%22Discounted%20orders%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Fcoupons%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Fcoupons%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22coupons%5C%2Famount%22%2C%22chart%22%3A%22amount%22%2C%22label%22%3A%22Net%20discount%20amount%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Fcoupons%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Fcoupons%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22taxes%5C%2Ftotal_tax%22%2C%22chart%22%3A%22total_tax%22%2C%22label%22%3A%22Total%20tax%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Ftaxes%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Ftaxes%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22taxes%5C%2Forder_tax%22%2C%22chart%22%3A%22order_tax%22%2C%22label%22%3A%22Order%20tax%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Ftaxes%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Ftaxes%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22taxes%5C%2Fshipping_tax%22%2C%22chart%22%3A%22shipping_tax%22%2C%22label%22%3A%22Shipping%20tax%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Ftaxes%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Ftaxes%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22revenue%5C%2Fshipping%22%2C%22chart%22%3A%22shipping%22%2C%22label%22%3A%22Shipping%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Frevenue%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Frevenue%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22downloads%5C%2Fdownload_count%22%2C%22chart%22%3A%22download_count%22%2C%22label%22%3A%22Downloads%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Fdownloads%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Fdownloads%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22revenue%5C%2Fgross_sales%22%2C%22chart%22%3A%22gross_sales%22%2C%22label%22%3A%22Gross%20sales%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Frevenue%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Frevenue%22%7D%5D%7D%7D%2C%7B%22stat%22%3A%22variations%5C%2Fitems_sold%22%2C%22chart%22%3A%22items_sold%22%2C%22label%22%3A%22Variations%20Sold%22%2C%22_links%22%3A%7B%22api%22%3A%5B%7B%22href%22%3A%22https%3A%5C%2F%5C%2Fcurilic.com%5C%2Fwp-json%5C%2Fwc-analytics%5C%2Freports%5C%2Fvariations%5C%2Fstats%22%7D%5D%2C%22report%22%3A%5B%7B%22href%22%3A%22%5C%2Fanalytics%5C%2Fvariations%22%7D%5D%7D%7D%5D%2C%22leaderboards%22%3A%5B%5D%7D%2C%22wcAdminSettings%22%3A%7B%22woocommerce_excluded_report_order_statuses%22%3A%5B%22pending%22%2C%22cancelled%22%2C%22failed%22%5D%2C%22woocommerce_actionable_order_statuses%22%3A%5B%22processing%22%2C%22on-hold%22%5D%2C%22woocommerce_default_date_range%22%3A%22period%3Dmonth%26compare%3Dprevious_year%22%7D%2C%22allowMarketplaceSuggestions%22%3Afalse%2C%22connectNonce%22%3A%22ce41252982%22%2C%22wcpay_welcome_page_connect_nonce%22%3A%228ff2f501f1%22%2C%22onboarding%22%3A%7B%22profile%22%3A%7B%22skipped%22%3Atrue%7D%7D%2C%22alertCount%22%3A%220%22%2C%22visibleTaskListIds%22%3A%5B%5D%2C%22marketing%22%3A%7B%22installedExtensions%22%3A%5B%5D%7D%7D%7D' ) );
+				wp.apiFetch.use( wp.apiFetch.createPreloadingMiddleware( JSON.parse( decodeURIComponent( '%5B%5D' ) ) ) )
+
+</script>
+<script id="wc-settings-js" src="https://curilic.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-settings.js?ver=08cd49de1c10922772515079471b6cd6"></script>
+<script id="wc-number-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/number/index.js?ver=6.8.2"></script>
+<script id="wp-deprecated-js" src="https://curilic.com/wp-includes/js/dist/deprecated.min.js?ver=96593d5d272d008fbcb6912fa0b86778"></script>
+<script id="wp-escape-html-js" src="https://curilic.com/wp-includes/js/dist/escape-html.min.js?ver=00a5735837e9efe13da1d979f16a7105"></script>
+<script id="wp-element-js" src="https://curilic.com/wp-includes/js/dist/element.min.js?ver=3dfdc75a0abf30f057df44e9a39abe5b"></script>
+<script id="wp-html-entities-js" src="https://curilic.com/wp-includes/js/dist/html-entities.min.js?ver=c6385fb7cd9fdada1cf8892a545f8a26"></script>
+<script id="wc-currency-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/currency/index.js?ver=6.8.2"></script>
+<script id="wc-date-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/date/index.js?ver=6.8.2"></script>
+<script id="wp-dom-js" src="https://curilic.com/wp-includes/js/dist/dom.min.js?ver=3c10edc1abf3fbbc79f17fd7d1d332eb"></script>
+<script id="wp-is-shallow-equal-js" src="https://curilic.com/wp-includes/js/dist/is-shallow-equal.min.js?ver=649feec00389556f8015a6b97efc1cb1"></script>
+<script id="wp-keycodes-js" src="https://curilic.com/wp-includes/js/dist/keycodes.min.js?ver=84a0e6bbcf0b9e1ea0184c3f2bf28022"></script>
+<script id="wp-priority-queue-js" src="https://curilic.com/wp-includes/js/dist/priority-queue.min.js?ver=efad6460ae6b28406d39866cb10731e0"></script>
+<script id="wp-compose-js" src="https://curilic.com/wp-includes/js/dist/compose.min.js?ver=e52c48958a19b766c6a9d28c02d53575"></script>
+<script id="wp-date-js" src="https://curilic.com/wp-includes/js/dist/date.min.js?ver=e923a564a0407e0c2ffcbd348817ca86"></script>
+<script id="wp-date-js-after">
+wp.date.setSettings( {"l10n":{"locale":"en_US","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"meridiem":{"am":"am","pm":"pm","AM":"AM","PM":"PM"},"relative":{"future":"%s from now","past":"%s ago"}},"formats":{"time":"g:i a","date":"F j, Y","datetime":"F j, Y g:i a","datetimeAbbreviated":"M j, Y g:i a"},"timezone":{"offset":-4,"string":"America\/New_York","abbr":"EDT"}} );
+</script>
+<script id="wp-primitives-js" src="https://curilic.com/wp-includes/js/dist/primitives.min.js?ver=cadf5cfaabdb15c8c8fc440547afe919"></script>
+<script id="wp-redux-routine-js" src="https://curilic.com/wp-includes/js/dist/redux-routine.min.js?ver=5156478c032ea85a2bbdceeb7a43b0c1"></script>
+<script id="wp-data-js" src="https://curilic.com/wp-includes/js/dist/data.min.js?ver=6c1ab5799c4b061254d313d2d8d9fb87"></script>
+<script id="wp-data-js-after">
+( function() {
+	var userId = 8;
+	var storageKey = "WP_DATA_USER_" + userId;
+	wp.data
+		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
+	wp.data.plugins.persistence.__unstableMigrate( { storageKey: storageKey } );
+} )();
+</script>
+<script id="wp-rich-text-js" src="https://curilic.com/wp-includes/js/dist/rich-text.min.js?ver=e7d57502b62ec4756783a0cd79238841"></script>
+<script id="wp-warning-js" src="https://curilic.com/wp-includes/js/dist/warning.min.js?ver=b9190af8fc6a3a48c580473c6f337b88"></script>
+<script id="wp-components-js" src="https://curilic.com/wp-includes/js/dist/components.min.js?ver=76c5a4c54d97b02824ed3d3b164c2811"></script>
+<script id="wc-navigation-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/navigation/index.js?ver=6.8.2"></script>
+<script id="wp-autop-js" src="https://curilic.com/wp-includes/js/dist/autop.min.js?ver=21d1d6c005241b908b592f52ad684a28"></script>
+<script id="wp-blob-js" src="https://curilic.com/wp-includes/js/dist/blob.min.js?ver=87cf2365cd719a6954f1e2bb8bcc692a"></script>
+<script id="wp-block-serialization-default-parser-js" src="https://curilic.com/wp-includes/js/dist/block-serialization-default-parser.min.js?ver=8ee151736a1e51db2bafbb61ddd60634"></script>
+<script id="wp-shortcode-js" src="https://curilic.com/wp-includes/js/dist/shortcode.min.js?ver=d6964e945049b6190adc8770cda168c4"></script>
+<script id="wp-blocks-js" src="https://curilic.com/wp-includes/js/dist/blocks.min.js?ver=658a51e7220626e26a92a46af5c2e489"></script>
+<script id="wp-core-data-js" src="https://curilic.com/wp-includes/js/dist/core-data.min.js?ver=95df951bbac4c9f2fd2e6da80561595d"></script>
+<script id="wp-data-controls-js" src="https://curilic.com/wp-includes/js/dist/data-controls.min.js?ver=6a75067d86cf9ab901a4646595575446"></script>
+<script id="wc-store-data-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/data/index.js?ver=6.8.2"></script>
+<script id="wp-viewport-js" src="https://curilic.com/wp-includes/js/dist/viewport.min.js?ver=7ee74cd3ed0dfcfd22b233b8750d1025"></script>
+<script id="wc-components-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/components/index.js?ver=6.8.2"></script>
+<script id="wc-csv-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/csv-export/index.js?ver=6.8.2"></script>
+<script id="wc-experimental-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/experimental/index.js?ver=6.8.2"></script>
+<script id="wc-customer-effort-score-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/customer-effort-score/index.js?ver=6.8.2"></script>
+<script id="wc-explat-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/explat/index.js?ver=6.8.2"></script>
+<script id="wp-notices-js" src="https://curilic.com/wp-includes/js/dist/notices.min.js?ver=e44820c667bf205cacdfc48cbeb3c2e6"></script>
+<script id="wc-notices-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/notices/index.js?ver=6.8.2"></script>
+<script id="wc-tracks-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/tracks/index.js?ver=6.8.2"></script>
+<script id="wp-plugins-js" src="https://curilic.com/wp-includes/js/dist/plugins.min.js?ver=f885533aefb501e1eedcbd4a9d04ca70"></script>
+<script id="wc-admin-app-js-extra">
+var wcAdminAssets = {"path":"https:\/\/curilic.com\/wp-content\/plugins\/woocommerce\/assets\/client\/admin\/","version":"6.8.2"};
+</script>
+<script id="wc-admin-app-js-before">
+window.wcAdminFeatures = {"activity-panels":true,"analytics":true,"coupons":true,"customer-effort-score-tracks":true,"experimental-products-task":true,"experimental-import-products-task":true,"experimental-fashion-sample-products":true,"experimental-product-tour":true,"shipping-smart-defaults":true,"shipping-setting-tour":true,"homescreen":true,"marketing":true,"mobile-app-banner":true,"navigation":false,"onboarding":true,"onboarding-tasks":true,"remote-inbox-notifications":false,"remote-free-extensions":true,"payment-gateway-suggestions":true,"shipping-label-banner":true,"subscriptions":true,"store-alerts":true,"transient-notices":true,"wc-pay-promotion":true,"wc-pay-welcome-page":true,"wc-pay-subscriptions-page":true}
+</script>
+<script id="wc-admin-app-js" src="https://curilic.com/wp-content/plugins/woocommerce/assets/client/admin/app/index.js?ver=6.8.2"></script>
+<script id="dobby-js-extra">
+var dobbySettings = {"selectorCloset":"#dobby-closet","selectorDobby":"#dobby","threshold":"1"};
+</script>
+<script id="dobby-js" src="https://curilic.com/wp-content/plugins/wp-dobby/assets/js/dobby.js?ver=1661486501"></script>
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload==='function')wpOnload();</script>
+</body>
+</html>
