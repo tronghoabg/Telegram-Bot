@@ -6,7 +6,4 @@ pram = {"aggregation": "event_total_counts", "access_token": "EAAQUZAS3L8KIBAM92
 url = "https://graph.facebook.com/v15.0/449542583803743/stats"
 res = requests.get(url, params=pram,  headers=headerscookie).json()
 
-
-
-
 print(res)
