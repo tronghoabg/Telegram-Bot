@@ -1,9 +1,11 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import requests
+import datetime
 
-headerscookie = {'cookie': 'sb=q7VOY8PHXuHh725rVOsTvInf;wd=1920x979;datr=q7VOY_cZnDBBsStiXW6xW9Ef;c_user=100038154123301;xs=21%3AENJvFHNmbKlu7A%3A2%3A1666102705%3A-1%3A6383;fr=0Av79RAfphWeAqNME.AWWEUQ0T-P0beKPCIOGI6ioYOyk.BjTrWr.2B.AAA.0.0.BjTrWz.AWUlgidyNR0;cppo=1;presence=EDvF3EtimeF1666102803EuserFA21B38154123301A2EstateFDutF0CEchF_7bCC;usida=eyJ2ZXIiOjEsImlkIjoiQXJqeWQ0bzFjcG02MCIsInRpbWUiOjE2NjYxMDI5MDl9;'}
-token = "EAABsbCS1iHgBAOUpNE8uFkJkqMJ0Wt9H8iLiKk5o07M37DVWKNcXM7srzwQNuJBlQ1b2aitz0wlFJKESu1fHuvhZA9vZBW7SdRRJwEkHxlU9rt0COHu22lBR0vYVUMEXZC8YFAlgUlZCF8lIT5RwRmzDr43JZBu36vQVb3Nkaz7U5sqHib8Gk"
+headerscookie = {'cookie': 'sb=q7VOY8PHXuHh725rVOsTvInf;wd=1920x979;datr=q7VOY_cZnDBBsStiXW6xW9Ef;locale=vi_VN;c_user=100038154123301;xs=34%3AgJIylZH8tZWuvw%3A2%3A1666172784%3A-1%3A6383;fr=0urvl5vtwo12leyL1.AWXmrH354dblxFVYfUTKDf8CYOA.BjT3OR.2B.AAA.0.0.BjT8dx.AWUUrj5R4Dc;usida=eyJ2ZXIiOjEsImlkIjoiQXJqenYzeDFpZnN3Y2giLCJ0aW1lIjoxNjY2MTcyNzkzfQ%3D%3D;cppo=1;presence=C%7B%22t3%22%3A%5B%5D%2C%22utc3%22%3A1666172831185%2C%22v%22%3A1%7D;'}
+
+token = "EAABsbCS1iHgBAJmycXTVZADf1VDfzfwcp6IzuqGq63NSZAZBgQGZCH6nWjakXMv3zQOYrW4oS4f10sZAZCtOTCQOnSCpQTOPSZC7Iu3fJVIfA9CnDZAXCgM7AE79t2uoZBUlk0Py1nklA0PyTyNZAnqZB0iLKfajcjQgicnTCu6YPJJUCgOzlV3oZBl9"
 
 dictPixel = {   1:
             {'id': '449542583803743',
@@ -53,11 +55,59 @@ def getStats(idPixel, flagstat):
     print(resstock)
     return res
 
-async def stat(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+def Checkcurrli(day):
+    payload = {
+        'log': 'namvenus',
+        'pwd': 'Nam123nam10tr$',
+        'wp-submit': 'Log+In'
+    }
+
+    today = datetime.datetime.now()
+    fday = today - datetime.timedelta(days=day)
+
+    today = today.replace(microsecond=0).isoformat()
+    fday = fday.replace(hour=0, minute=0, second=0)
+    fday = fday.replace(microsecond=0).isoformat()
+
+    after = fday
+    before =  today
+
+    session = requests.Session()
+    res = session.post('https://curilic.com/wp-login.php/', data=payload)
+    res = session.get('https://curilic.com/wp-admin/admin.php?page=wc-admin&path=%2Fanalytics%2Foverview')
+    res = res.text
+    wpcookie = res[int(res.find('createNonceMiddleware( "')) + 24: int(res.find('createNonceMiddleware( "')) + 34]
+    print(wpcookie)
+    headerwp = {'x-wp-nonce': wpcookie}
+    reponse = session.get(
+        'https://curilic.com/wp-json/wc-analytics/reports/performance-indicators?after=' + after + '&before=' + before + '&stats=revenue/total_sales,revenue/net_revenue,orders/orders_count,orders/avg_order_value,products/items_sold,revenue/refunds,coupons/orders_count,coupons/amount&_locale=user',
+        headers=headerwp).json()
+    print(reponse)
+    timeline = "Từ : " + after + '\n'\
+            + 'Đến: ' + before + '\n\n'\
+            '-------OVER VIEW-------\n'
+    res = timeline + '\n'\
+          +  reponse[0]['label'] + ': ' + str(round(reponse[0]['value'], 2)) + '\n' \
+          + reponse[1]['label'] + ': ' + str(round(reponse[1]['value'], 2)) + '\n' \
+          + reponse[2]['label'] + ': ' + str(round(reponse[2]['value'], 2)) + '\n' \
+          + reponse[3]['label'] + ': ' + str(round(reponse[3]['value'], 2)) + '\n' \
+          + reponse[4]['label'] + ': ' + str(round(reponse[4]['value'], 2)) + '\n' \
+          + reponse[5]['label'] + ': ' + str(round(reponse[5]['value'], 2)) + '\n' \
+          + reponse[6]['label'] + ': ' + str(round(reponse[6]['value'], 2)) + '\n' \
+
+    return res
+
+
+async def CheckRev(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     print(update.message.text)
-    message = update.message
+    message = update.message.text
 
-
+    if message[4:6].isnumeric():
+        day = int(message[4:6])
+        res = Checkcurrli(day)
+        await  update.message.reply_text(res)
+    else:
+        await  update.message.reply_text('⛔ sai cú pháp , get all revalue /cu , or get x day /cu x ( day = now - x')
 
 async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Hello {update.effective_user.first_name}')
@@ -96,6 +146,6 @@ app.add_handler(CommandHandler("px1", share))
 app.add_handler(CommandHandler("px2", share))
 app.add_handler(CommandHandler("px3", share))
 app.add_handler(CommandHandler("px3", share))
-
+app.add_handler(CommandHandler("cu", CheckRev))
 
 app.run_polling()
