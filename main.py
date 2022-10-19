@@ -3,9 +3,9 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import requests
 import datetime
 
-headerscookie = {'cookie': 'sb=q7VOY8PHXuHh725rVOsTvInf;wd=1920x979;datr=q7VOY_cZnDBBsStiXW6xW9Ef;locale=vi_VN;c_user=100038154123301;xs=34%3AgJIylZH8tZWuvw%3A2%3A1666172784%3A-1%3A6383;fr=0urvl5vtwo12leyL1.AWXmrH354dblxFVYfUTKDf8CYOA.BjT3OR.2B.AAA.0.0.BjT8dx.AWUUrj5R4Dc;usida=eyJ2ZXIiOjEsImlkIjoiQXJqenYzeDFpZnN3Y2giLCJ0aW1lIjoxNjY2MTcyNzkzfQ%3D%3D;cppo=1;presence=C%7B%22t3%22%3A%5B%5D%2C%22utc3%22%3A1666172831185%2C%22v%22%3A1%7D;'}
+headerscookie = {'cookie': 'sb=q7VOY8PHXuHh725rVOsTvInf;datr=q7VOY_cZnDBBsStiXW6xW9Ef;locale=vi_VN;wd=1920x979;c_user=100038154123301;xs=34%3Aapf7xbjm0POOCw%3A2%3A1666191978%3A-1%3A6383;fr=0vkA8fNdpWZ8Msy2t.AWWVfwhzL2RS931Ghkj6fKE7Rl8.BjT_g8.2B.AAA.0.0.BjUBJr.AWWSFX34pSY;usida=eyJ2ZXIiOjEsImlkIjoiQXJrMDl5eDF0eG5ybngiLCJ0aW1lIjoxNjY2MTkxOTkzfQ%3D%3D;presence=C%7B%22t3%22%3A%5B%5D%2C%22utc3%22%3A1666191996066%2C%22v%22%3A1%7D;'}
 
-token = "EAABsbCS1iHgBAJmycXTVZADf1VDfzfwcp6IzuqGq63NSZAZBgQGZCH6nWjakXMv3zQOYrW4oS4f10sZAZCtOTCQOnSCpQTOPSZC7Iu3fJVIfA9CnDZAXCgM7AE79t2uoZBUlk0Py1nklA0PyTyNZAnqZB0iLKfajcjQgicnTCu6YPJJUCgOzlV3oZBl9"
+token = "EAABsbCS1iHgBAOr9avY1Baug8zdvKYov7UqH8uZCPP9PfjdfB2yb3sDGydpuMiDobf0ZC0dLG2ZC4mmX1d1jthDui0ZAlctpLAmF4ZAZBLLqsbx2PFiiZBjwbATZC9EUBD7ZBAyCppzqw0fBIf5jYrLZC265wzKQSIZC5syEdlt6maXOD0dKxOaTphz"
 
 dictPixel = {   1:
             {'id': '449542583803743',
