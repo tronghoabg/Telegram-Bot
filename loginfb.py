@@ -13,8 +13,8 @@ lsd = res[int(res.find('name="lsd"')) + 18 : int(res.find('name="lsd"')) + 29]
 headercookie = {'cookie': cookieoutsite}
 
 payload = {
-'email':'hoagamingpubg@gmail.com',
-'pass':'tronghoa.015!',
+'email':'tronghoabg@icloud.com',
+'pass':'Tanyen1!',
 'lsd': lsd
 }
 

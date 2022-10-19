@@ -27,7 +27,7 @@ def SharePixel(idAcc_Ads, idPixel):
 
     try:
         result = response['success']
-        result = "✅ Share pixel " + dictPixel[idPixel]['name']  + " thành công cho id ADS Acc: " + idAcc_Ads
+        result = "✅ Share pixel " + dictPixel[idPixel]['name']  + " thành công: " + idAcc_Ads
     except:
         try:
             result =  "⛔ " + response['error']['error_user_msg']
@@ -52,7 +52,6 @@ def getStats(idPixel, flagstat):
             + resstock['data'][0]['data'][7]['value'] + ': ' + str(resstock['data'][0]['data'][7]['count']) + '\n' \
             + resstock['data'][0]['data'][8]['value'] + ': ' + str(resstock['data'][0]['data'][8]['count']) + '\n' \
 
-    print(resstock)
     return res
 
 def Checkcurrli(day):
@@ -115,24 +114,27 @@ async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def share(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     print(update.message.text)
     message = update.message
+    listAcc = message.text.split()
+    print(listAcc)
     idAcc_Ads = message.text[5:50]
     idpixel = int(message.text[3])
     flagStat = message.text[5:9]
 
+
     if flagStat == "info":
         res = getStats(idpixel, flagStat)
         await update.message.reply_text(res)
-        exit()
-    print(idAcc_Ads)
+        return
     if len(idAcc_Ads) == 0:
         await update.message.reply_text('⛔ Có vẻ bạn chưa nhập id Ads acc')
     elif len(idAcc_Ads) > 0 and len(idAcc_Ads) < 6:
         await update.message.reply_text('⛔ id Ads Acc bạn nhập là quá ngắn, Vui lòng kiểm tra lại')
     else:
-        await update.message.reply_text("🤖 Đang share pixcel cho Ads Acc id: " + idAcc_Ads)
-        print(int(message.text[3]))
-        res = SharePixel(idAcc_Ads, idpixel)
-        await update.message.reply_text(res)
+        await update.message.reply_text("🤖Đang share pixel cho " + str(len(listAcc)-1) + " acc")
+        for i in range(1, len(listAcc)):
+            print(i)
+            res = SharePixel(listAcc[i], idpixel)
+            await update.message.reply_text(res)
 
 
 
@@ -140,12 +142,12 @@ async def share(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 app = ApplicationBuilder().token("5774231926:AAFwJiyc57wH-UX_Q0sazXZL3gZERhySOUI").build()
-
 app.add_handler(CommandHandler("hello", hello))
 app.add_handler(CommandHandler("px1", share))
 app.add_handler(CommandHandler("px2", share))
 app.add_handler(CommandHandler("px3", share))
 app.add_handler(CommandHandler("px3", share))
 app.add_handler(CommandHandler("cu", CheckRev))
+
 
 app.run_polling()
