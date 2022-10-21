@@ -3,9 +3,35 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import requests
 import datetime
 
-headerscookie = {'cookie': 'sb=q7VOY8PHXuHh725rVOsTvInf;datr=q7VOY_cZnDBBsStiXW6xW9Ef;locale=vi_VN;wd=1920x979;c_user=100038154123301;xs=34%3Aapf7xbjm0POOCw%3A2%3A1666191978%3A-1%3A6383;fr=0vkA8fNdpWZ8Msy2t.AWWVfwhzL2RS931Ghkj6fKE7Rl8.BjT_g8.2B.AAA.0.0.BjUBJr.AWWSFX34pSY;usida=eyJ2ZXIiOjEsImlkIjoiQXJrMDl5eDF0eG5ybngiLCJ0aW1lIjoxNjY2MTkxOTkzfQ%3D%3D;presence=C%7B%22t3%22%3A%5B%5D%2C%22utc3%22%3A1666191996066%2C%22v%22%3A1%7D;'}
+ck = 'sb=q7VOY8PHXuHh725rVOsTvInf;datr=q7VOY_cZnDBBsStiXW6xW9Ef;locale=vi_VN;wd=1920x979;usida=eyJ2ZXIiOjEsImlkIjoiQXJrM3huejF2aGZpOHoiLCJ0aW1lIjoxNjY2MzYzNzk5fQ%3D%3D;c_user=100038154123301;xs=50%3AyVQ95apCJiWdXQ%3A2%3A1666363804%3A-1%3A6383;fr=0FRAO1qw203IvjsA6.AWW0d3BgL_XQoPlqQsDKF2D15z4.BjUqzp.2B.AAA.0.0.BjUrGd.AWVG6zoWC6M;'
+headerscookie = {'cookie': ck}
 
-token = "EAABsbCS1iHgBAJqJC4lWWcfAFJ5zsCL5fc8PLkbsvxEeZAv9yic15o6R07ZCP5WZBk0LJNYcWGNwsqMmRYnSYIt7sOgApYojJJq7gIbZCl5X9YHgNiLyURQu79sdTcn2XWsFkZB6gpoFzyZB3J3f1KRjTXc9f5cpOUHirXEmuJUZAh85drZCS6Bs"
+
+headers = {
+    'authority': 'm.facebook.com',
+    'accept': '*/*',
+    'accept-language': 'vi,en;q=0.9,vi-VN;q=0.8,fr-FR;q=0.7,fr;q=0.6,en-US;q=0.5',
+    'cookie': ck,
+    'origin': 'https://m.facebook.com',
+    'referer': 'https://www.facebook.com',
+    'sec-ch-ua': '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
+}
+
+
+def Token():
+    home = requests.get('https://business.facebook.com/adsmanager/manage/accounts', headers=headers).text
+    uid_page = home.split('adAccountId: \\"')[1].split('\\"')[0]
+    ads_page = requests.get(f'https://business.facebook.com/adsmanager/manage/accounts?act={uid_page}',
+                            headers=headers).text
+    token = ads_page.split('window.__accessToken="')[1].split('"')[0]
+    print(token)
+    return token
 
 dictPixel = {   1:
             {'id': '449542583803743',
@@ -18,7 +44,7 @@ dictPixel = {   1:
             'name': 'Pixel 30+'},
             }
 
-def SharePixel(idAcc_Ads, idPixel):
+def SharePixel(idAcc_Ads, idPixel, token):
     result = ""
     dataid = {"account_id": idAcc_Ads, "business": "606755291020760",
               "access_token": token}
@@ -37,22 +63,25 @@ def SharePixel(idAcc_Ads, idPixel):
     print(response)
     return result
 
-def getStats(idPixel, flagstat):
+def getStats(idPixel, flagstat, token):
+
+
     pram = {"aggregation": "event_total_counts",
+            "start_time": "2022-01-01T09:45:32",
             "access_token": token}
     url = "https://graph.facebook.com/v15.0/" + dictPixel[idPixel]['id'] + "/stats"
     resstock = requests.get(url, params=pram, headers=headerscookie).json()
-    starttime = "Form time: "  + resstock['data'][0]['start_time'][0:10]  + ' | ' + resstock['data'][0]['start_time'][11:19]
+    print(resstock['data'][0])
+    starttime = dictPixel[idPixel]['name'] +  '\n' + "Tổng từ ngày: "  + resstock['data'][0]['start_time'][0:10] +  '\n'
 
-    res =       starttime  + '\n'\
-            + resstock['data'][0]['data'][0]['value'] + ': ' + str(resstock['data'][0]['data'][0]['count']) + '\n'\
-            + resstock['data'][0]['data'][1]['value'] + ': ' + str(resstock['data'][0]['data'][1]['count']) + '\n'\
-            + resstock['data'][0]['data'][3]['value'] + ': ' + str(resstock['data'][0]['data'][3]['count']) + '\n'\
-            + resstock['data'][0]['data'][6]['value'] + ': ' + str(resstock['data'][0]['data'][6]['count']) + '\n' \
-            + resstock['data'][0]['data'][7]['value'] + ': ' + str(resstock['data'][0]['data'][7]['count']) + '\n' \
-            + resstock['data'][0]['data'][8]['value'] + ': ' + str(resstock['data'][0]['data'][8]['count']) + '\n' \
-
-    return res
+    res =  starttime  +  '\n'
+    listValue = resstock['data'][0]['data']
+    chart = ''
+    listCheck = ['ClickEvent','PageView','GeneralEvent','AddToCart','InitiateCheckout','Purchase']
+    for i in range(0, len(listValue) -1):
+        if resstock['data'][0]['data'][i]['value'] in listCheck:
+            chart += resstock['data'][0]['data'][i]['value'] + ': ' + str(resstock['data'][0]['data'][i]['count']) + '\n'
+    return res + chart
 
 def Checkcurrli(day):
     payload = {
@@ -121,19 +150,23 @@ async def share(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     flagStat = message.text[5:9]
 
 
-    if flagStat == "info":
-        res = getStats(idpixel, flagStat)
+
+    if len(message.text) ==4:
+        token = Token()
+        res = getStats(idpixel, flagStat, token)
         await update.message.reply_text(res)
         return
+
     if len(idAcc_Ads) == 0:
         await update.message.reply_text('⛔ Có vẻ bạn chưa nhập id Ads acc')
     elif len(idAcc_Ads) > 0 and len(idAcc_Ads) < 6:
         await update.message.reply_text('⛔ id Ads Acc bạn nhập là quá ngắn, Vui lòng kiểm tra lại')
     else:
         await update.message.reply_text("🤖Đang share pixel cho " + str(len(listAcc)-1) + " acc")
+        token = Token()
         for i in range(1, len(listAcc)):
             print(i)
-            res = SharePixel(listAcc[i], idpixel)
+            res = SharePixel(listAcc[i], idpixel, token)
             await update.message.reply_text(res)
 
 
