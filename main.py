@@ -3,7 +3,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import requests
 import datetime
 
-ck = 'sb=q7VOY8PHXuHh725rVOsTvInf;datr=q7VOY_cZnDBBsStiXW6xW9Ef;locale=vi_VN;wd=1920x979;usida=eyJ2ZXIiOjEsImlkIjoiQXJrM3huejF2aGZpOHoiLCJ0aW1lIjoxNjY2MzYzNzk5fQ%3D%3D;c_user=100038154123301;xs=50%3AyVQ95apCJiWdXQ%3A2%3A1666363804%3A-1%3A6383;fr=0FRAO1qw203IvjsA6.AWW0d3BgL_XQoPlqQsDKF2D15z4.BjUqzp.2B.AAA.0.0.BjUrGd.AWVG6zoWC6M;'
+ck = 'sb=q7VOY8PHXuHh725rVOsTvInf;datr=q7VOY_cZnDBBsStiXW6xW9Ef;locale=vi_VN;wd=1920x979;usida=eyJ2ZXIiOjEsImlkIjoiQXJrM3huejF2aGZpOHoiLCJ0aW1lIjoxNjY2MzYzNzk5fQ%3D%3D;c_user=100038154123301;xs=10%3A54YRqJzMyQVT0A%3A2%3A1666442188%3A-1%3A6383;fr=0kxdONezTTqihGDw1.AWWpR-EwgDSIGof9M3CwIBZSOvQ.BjU5Od.2B.AAA.0.0.BjU-PN.AWXz01AQxEk;presence=C%7B%22t3%22%3A%5B%5D%2C%22utc3%22%3A1666442200716%2C%22v%22%3A1%7D;'
 headerscookie = {'cookie': ck}
 
 
